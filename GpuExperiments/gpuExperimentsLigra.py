@@ -11,13 +11,13 @@ commands = {
 }
 
 directories = {
-    # 'SLJ1': '/media/Data/00_GraphDatasets/GBREW/SLJ1',
-    # 'RD': '/media/Data/00_GraphDatasets/GBREW/RD',
-    # 'CPAT': '/media/Data/00_GraphDatasets/GBREW/CPAT',
-    # 'SPKC': '/media/Data/00_GraphDatasets/GBREW/SPKC',
-    # 'CORKT': '/media/Data/00_GraphDatasets/GBREW/CORKT',
-    # 'WIKLE': '/media/Data/00_GraphDatasets/GBREW/WIKLE',
-    # 'GPLUS': '/media/Data/00_GraphDatasets/GBREW/GPLUS',
+    'SLJ1': '/media/Data/00_GraphDatasets/GBREW/SLJ1',
+    'RD': '/media/Data/00_GraphDatasets/GBREW/RD',
+    'CPAT': '/media/Data/00_GraphDatasets/GBREW/CPAT',
+    'SPKC': '/media/Data/00_GraphDatasets/GBREW/SPKC',
+    'CORKT': '/media/Data/00_GraphDatasets/GBREW/CORKT',
+    'WIKLE': '/media/Data/00_GraphDatasets/GBREW/WIKLE',
+    'GPLUS': '/media/Data/00_GraphDatasets/GBREW/GPLUS',
     'WEB01' : '/media/Data/00_GraphDatasets/GBREW/WEB01',
     'TWTR' : '/media/Data/00_GraphDatasets/GBREW/TWTR',
 }
@@ -38,12 +38,24 @@ def run_command(command):
 
 # Function to parse the elapsed time from the command output
 def extract_running_times(output):
-    running_times  = re.findall(r'Running time\s*:\s*(\d+\.?\d*)\s*', output)
+    # Modify the regular expression to capture scientific notation
+    running_times = re.findall(r'Running time\s*:\s*([\d\.eE\+\-]+)', output)
+    # Convert the captured string(s) to regular numbers
+    running_times_regular = []
+    for time in running_times:
+        try:
+            num = float(time)
+        except ValueError:
+            num = num
+        # Check if the original string is in integer format
+        if '.' not in time and 'e' not in time.lower():
+            running_times_regular.append(int(num))
+        else:
+            running_times_regular.append(num)
+
     # Convert the extracted string values to floats
-    if running_times:
-        running_times = [float(time) for time in running_times]
-        # print("Extracted Running times: ", running_times)
-        return running_times
+    if running_times_regular:
+        return running_times_regular
     # print("No running times found")
     return None
 
@@ -60,8 +72,9 @@ for cmd_key, command in commands.items():
     for dir_key, directory in directories.items():
         row = [dir_key]
         for file_key, file_name in file_names.items():
+            threads = "OMP_NUM_THREADS=32"
             full_path = f"{directory}/{file_name}"
-            full_command = f"{command} -s {full_path}"
+            full_command = f"{threads} {command} -s {full_path}"
             print(full_command)
             output = run_command(full_command)
             print("output is: ")
