@@ -29,7 +29,7 @@ INCLUDE_GORDER = $(INC_DIR)/gorder
 INCLUDE_CORDER = $(INC_DIR)/corder
 INCLUDE_LEIDEN = $(INC_DIR)/leiden
 # =========================================================
-INCLUDE_BOOST  = /opt/boost_1_58_0/include  
+INCLUDE_BOOST  = /u/rgq5aw/GIT/GraphBrew/boost_1_58_0/include  
 # =========================================================
 DEP_GAPBS  = $(wildcard $(INC_DIR)/gapbs/*.h)
 DEP_RABBIT = $(wildcard $(INC_DIR)/rabbit/*.hpp)
@@ -75,7 +75,7 @@ CXXFLAGS_LEIDEN = -DTYPE=float -DMAX_THREADS=$(PARALLEL) -DREPEAT_METHOD=1
 LDLIBS_RABBIT   += -ltcmalloc_minimal -lnuma
 # =========================================================
 # Default library path for Boost libraries
-BOOST_LIB_DIR := /opt/boost_1_58_0/lib
+BOOST_LIB_DIR := /u/rgq5aw/GIT/GraphBrew/boost_1_58_0/lib
 # Verify if the Boost library directory exists, otherwise use the fallback directory
 ifeq ($(wildcard $(BOOST_LIB_DIR)/*),)
     BOOST_LIB_DIR := /usr/local/lib
