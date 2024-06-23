@@ -44,7 +44,7 @@ typedef WriterBase<NodeID, WNode, WeightT> WeightedWriter;
 typedef std::vector<Graph> PGraph;
 typedef std::vector<WGraph> PWGraph;
 
-typedef GraphArrays<NodeID, NodeID, NodeID> FlatGraph;
+typedef CSRGraphFlat <NodeID>  FlatGraph;
 typedef std::vector<FlatGraph> PFlatGraph;
 
 // Used to pick random non-zero degree starting points for search algorithms
