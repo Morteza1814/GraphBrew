@@ -5,21 +5,23 @@ import os
 
 # Fill out these dictionaries manually
 commands = {
-    'spmv': '/home/rgq5aw/gunrock/build/bin/jaguar/spmv',
-    'pr': '/home/rgq5aw/gunrock/build/bin/jaguar/pr',
-    'sssp': '/home/rgq5aw/gunrock/build/bin/jaguar/sssp',
-    'bfs': '/home/rgq5aw/gunrock/build/bin/jaguar/bfs',
-    'bc': '/home/rgq5aw/gunrock/build/bin/jaguar/bc'
+    'spmv': '/u/rgq5aw/GIT/gunrock/build/bin/spmv',
+    'pr': '/u/rgq5aw/GIT/gunrock/build/bin/pr',
+    'sssp': '/u/rgq5aw/GIT/gunrock/build/bin/sssp',
+    'bfs': '/u/rgq5aw/GIT/gunrock/build/bin/bfs',
+    'bc': '/u/rgq5aw/GIT/gunrock/build/bin/bc'
 }
 
 directories = {
-    'SLJ1': '/media/Data/00_GraphDatasets/GBREW/SLJ1',
-    'RD': '/media/Data/00_GraphDatasets/GBREW/RD',
-    'CPAT': '/media/Data/00_GraphDatasets/GBREW/CPAT',
-    'SPKC': '/media/Data/00_GraphDatasets/GBREW/SPKC',
-    'CORKT': '/media/Data/00_GraphDatasets/GBREW/CORKT',
-    'WIKLE': '/media/Data/00_GraphDatasets/GBREW/WIKLE',
-    'GPLUS': '/media/Data/00_GraphDatasets/GBREW/GPLUS',
+    'SLJ1': '/bigtemp/rgq5aw/graphDatasets/SLJ1',
+    'RD': '/bigtemp/rgq5aw/graphDatasets/RD',
+    'CPAT': '/bigtemp/rgq5aw/graphDatasets/CPAT',
+    'SPKC': '/bigtemp/rgq5aw/graphDatasets/SPKC',
+    'CORKT': '/bigtemp/rgq5aw/graphDatasets/CORKT',
+    'WIKLE': '/bigtemp/rgq5aw/graphDatasets/WIKLE',
+    'GPLUS': '/bigtemp/rgq5aw/graphDatasets/GPLUS',
+    'WEB01' : '/bigtemp/rgq5aw/graphDatasets/WEB01',
+    'TWTR' : '/bigtemp/rgq5aw/graphDatasets/TWTR',
 }
 
 file_names = {
