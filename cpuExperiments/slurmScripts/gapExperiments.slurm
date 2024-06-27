@@ -13,4 +13,4 @@
 #SBATCH --reservation=cmv6ru_96
 
 module load python3
-python3 ../gapExperiments.py
+python3 -u ../gapExperiments.py

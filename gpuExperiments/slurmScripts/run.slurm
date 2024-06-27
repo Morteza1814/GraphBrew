@@ -27,4 +27,4 @@ export PATH=/usr/bin:${PATH}
 # export LD_LIBRARY_PATH=/tools/Xilinx/Vitis/2023.1/tps/lnx64/cmake-3.24.2/libs/Ubuntu:$LD_LIBRARY_PATH
 export PATH=/usr/local/bin:$PATH
 
-python3 /u/rgq5aw/GIT/GraphBrew/gpuExperiments/gpuExperiments_gunrock.py
+python3 -u /u/rgq5aw/GIT/GraphBrew/gpuExperiments/gpuExperiments_gunrock.py

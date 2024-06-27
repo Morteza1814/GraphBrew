@@ -5,7 +5,7 @@
 # Attempt to find gcc-9, else use default gcc
 CC  = $(shell which gcc-9 || which gcc)
 CXX = $(shell which g++-9 || which g++)
-RABBIT_ENABLE = 1
+# RABBIT_ENABLE = 1
 # =========================================================
 PYTHON=@python3
 PIP=@pip

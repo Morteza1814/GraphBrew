@@ -3,6 +3,8 @@ import csv
 import re
 import os
 
+max_threads = os.cpu_count()
+
 # Fill out these dictionaries manually
 commands = {
     'pr': '/u/rgq5aw/GIT/gapbs/pr',
@@ -10,6 +12,8 @@ commands = {
     'sssp': '/u/rgq5aw/GIT/gapbs/sssp',
     'spmv': '/u/rgq5aw/GIT/gapbs/pr_spmv',
     'bfs': '/u/rgq5aw/GIT/gapbs/bfs',
+    'cc': '/u/rgq5aw/GIT/gapbs/cc',
+    'cc_sv': '/u/rgq5aw/GIT/gapbs/cc_sv',
 }
 
 directories = {
@@ -74,7 +78,7 @@ for cmd_key, command in commands.items():
     for dir_key, directory in directories.items():
         row = [dir_key]
         for file_key, file_name in file_names.items():
-            threads = "OMP_NUM_THREADS=32"
+            threads = "OMP_NUM_THREADS=" + str(max_threads)
             full_path = f"{directory}/{file_name}"
             full_command = f"{threads} {command} -f {full_path} -n 100"
             print(full_command)
