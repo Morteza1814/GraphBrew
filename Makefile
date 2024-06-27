@@ -5,7 +5,7 @@
 # Attempt to find gcc-9, else use default gcc
 CC  = $(shell which gcc-9 || which gcc)
 CXX = $(shell which g++-9 || which g++)
-# RABBIT_ENABLE = 1
+RABBIT_ENABLE ?= 1
 # =========================================================
 PYTHON=@python3
 PIP=@pip
@@ -30,7 +30,7 @@ INCLUDE_GORDER = $(INC_DIR)/gorder
 INCLUDE_CORDER = $(INC_DIR)/corder
 INCLUDE_LEIDEN = $(INC_DIR)/leiden
 # =========================================================
-INCLUDE_BOOST  = /u/rgq5aw/GIT/GraphBrew/boost_1_58_0/include  
+INCLUDE_BOOST  = /opt/boost_1_58_0/include  
 # =========================================================
 DEP_GAPBS  = $(wildcard $(INC_DIR)/gapbs/*.h)
 DEP_RABBIT = $(wildcard $(INC_DIR)/rabbit/*.hpp)
@@ -76,7 +76,7 @@ CXXFLAGS_LEIDEN = -DTYPE=float -DMAX_THREADS=$(PARALLEL) -DREPEAT_METHOD=1
 LDLIBS_RABBIT   += -ltcmalloc_minimal -lnuma
 # =========================================================
 # Default library path for Boost libraries
-BOOST_LIB_DIR := /u/rgq5aw/GIT/GraphBrew/boost_1_58_0/lib
+BOOST_LIB_DIR := /opt/boost_1_58_0/lib
 # Verify if the Boost library directory exists, otherwise use the fallback directory
 ifeq ($(wildcard $(BOOST_LIB_DIR)/*),)
     BOOST_LIB_DIR := /usr/local/lib
@@ -89,7 +89,7 @@ LDLIBS  =
 INCLUDES = -I$(INCLUDE_GAPBS) -I$(INCLUDE_GORDER) -I$(INCLUDE_CORDER) -I$(INCLUDE_LEIDEN) -I$(INCLUDE_BOOST)
 # =========================================================
 # Optional RABBIT includes
-ifdef RABBIT_ENABLE
+ifeq ($(RABBIT_ENABLE), 1)
 CXXFLAGS += -DRABBIT_ENABLE 
 LDLIBS += $(LDLIBS_BOOST) $(LDLIBS_RABBIT)
 INCLUDES += -I$(INCLUDE_RABBIT)
@@ -102,7 +102,7 @@ KERNELS_BIN = $(addprefix $(BIN_DIR)/,$(KERNELS))
 SUITE = $(KERNELS_BIN) $(BIN_DIR)/converter
 # =========================================================
 
-.PHONY: $(KERNELS) all run-% exp-% graph-% help-% install-py-deps help clean clean-all clean-results run-%-gdb run-%-sweep $(BIN_DIR)/% scrub-all
+.PHONY: $(KERNELS) converter all run-% exp-% graph-% help-% install-py-deps help clean clean-all clean-results run-%-gdb run-%-sweep $(BIN_DIR)/% scrub-all
 all: $(SUITE)
 
 # =========================================================
@@ -202,7 +202,7 @@ help: help-pr
 	@echo "  help           - Displays this help message"
 
 # Alias each kernel target to its corresponding help target
-$(KERNELS): %: help-%
+$(KERNELS) converter: %: help-%
 
 help-%: $(BIN_DIR)/%
 	@./$< -h 

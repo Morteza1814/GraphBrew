@@ -763,3 +763,5271 @@ error is:
 
 -------------------------------------------------
 OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/RD/graph_5.sg -n 100
+output is: 
+Read Time:           8.78112
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2 Estimated size: 402 MB
+Trial Time:          1.59787
+Trial Time:          1.75070
+Trial Time:          1.36339
+Trial Time:          1.48004
+Trial Time:          1.34492
+Trial Time:          1.35301
+Trial Time:          1.38765
+Trial Time:          1.16900
+Trial Time:          1.53771
+Trial Time:          1.54804
+Trial Time:          1.24734
+Trial Time:          1.69352
+Trial Time:          1.62755
+Trial Time:          1.52281
+Trial Time:          1.12557
+Trial Time:          1.28694
+Trial Time:          1.38540
+Trial Time:          1.46173
+Trial Time:          1.58908
+Trial Time:          1.15366
+Trial Time:          1.54271
+Trial Time:          1.68146
+Trial Time:          1.69423
+Trial Time:          1.73618
+Trial Time:          1.52271
+Trial Time:          1.55261
+Trial Time:          1.68868
+Trial Time:          1.33188
+Trial Time:          1.28844
+Trial Time:          1.26210
+Trial Time:          1.41379
+Trial Time:          1.71136
+Trial Time:          1.34189
+Trial Time:          1.10073
+Trial Time:          1.49324
+Trial Time:          1.63193
+Trial Time:          1.68132
+Trial Time:          1.47549
+Trial Time:          1.31731
+Trial Time:          1.29036
+Trial Time:          1.33361
+Trial Time:          1.64221
+Trial Time:          1.95901
+Trial Time:          1.99550
+Trial Time:          1.68661
+Trial Time:          1.57584
+Trial Time:          1.51206
+Trial Time:          1.56871
+Trial Time:          1.39241
+Trial Time:          1.51215
+Trial Time:          1.35220
+Trial Time:          1.43588
+Trial Time:          1.75531
+Trial Time:          1.49004
+Trial Time:          1.51110
+Trial Time:          1.29564
+Trial Time:          1.58197
+Trial Time:          1.70836
+Trial Time:          1.37836
+Trial Time:          1.26790
+Trial Time:          1.70566
+Trial Time:          1.56912
+Trial Time:          1.49958
+Trial Time:          1.55174
+Trial Time:          1.24356
+Trial Time:          1.37750
+Trial Time:          1.35525
+Trial Time:          1.62295
+Trial Time:          1.49749
+Trial Time:          1.22591
+Trial Time:          1.19584
+Trial Time:          1.70343
+Trial Time:          1.85604
+Trial Time:          1.62518
+Trial Time:          1.14416
+Trial Time:          1.63460
+Trial Time:          1.29955
+Trial Time:          1.34406
+Trial Time:          1.45593
+Trial Time:          1.51705
+Trial Time:          1.27226
+Trial Time:          1.70773
+Trial Time:          1.42722
+Trial Time:          1.13178
+Trial Time:          1.24436
+Trial Time:          1.52401
+Trial Time:          1.23627
+Trial Time:          1.49349
+Trial Time:          1.26451
+Trial Time:          1.54754
+Trial Time:          1.34464
+Trial Time:          1.57724
+Trial Time:          1.62513
+Trial Time:          1.55850
+Trial Time:          1.52160
+Trial Time:          1.59272
+Trial Time:          1.76019
+Trial Time:          1.82439
+Trial Time:          1.38635
+Trial Time:          1.52159
+Average Time:        1.48325
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/RD/graph_8.sg -n 100
+output is: 
+Read Time:           9.11944
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2 Estimated size: 402 MB
+Trial Time:          1.63198
+Trial Time:          1.43402
+Trial Time:          1.15815
+Trial Time:          1.10799
+Trial Time:          1.25705
+Trial Time:          0.98015
+Trial Time:          1.56405
+Trial Time:          1.30747
+Trial Time:          1.33972
+Trial Time:          0.91871
+Trial Time:          1.34227
+Trial Time:          1.10634
+Trial Time:          1.19306
+Trial Time:          1.15864
+Trial Time:          1.22532
+Trial Time:          1.28270
+Trial Time:          1.38233
+Trial Time:          1.36436
+Trial Time:          1.20417
+Trial Time:          1.10324
+Trial Time:          1.10261
+Trial Time:          0.91268
+Trial Time:          1.20290
+Trial Time:          0.99192
+Trial Time:          1.02330
+Trial Time:          1.33974
+Trial Time:          1.18258
+Trial Time:          1.16875
+Trial Time:          1.26499
+Trial Time:          1.17416
+Trial Time:          1.19208
+Trial Time:          1.18995
+Trial Time:          1.37114
+Trial Time:          1.22820
+Trial Time:          1.35155
+Trial Time:          1.13678
+Trial Time:          0.95135
+Trial Time:          1.05629
+Trial Time:          1.33094
+Trial Time:          1.26515
+Trial Time:          1.25335
+Trial Time:          1.10797
+Trial Time:          1.49814
+Trial Time:          1.15255
+Trial Time:          0.98212
+Trial Time:          1.08271
+Trial Time:          1.36405
+Trial Time:          1.01473
+Trial Time:          1.35612
+Trial Time:          1.11525
+Trial Time:          0.98684
+Trial Time:          1.24617
+Trial Time:          1.31569
+Trial Time:          1.12140
+Trial Time:          1.14131
+Trial Time:          1.27139
+Trial Time:          1.08308
+Trial Time:          1.08078
+Trial Time:          1.25643
+Trial Time:          1.37021
+Trial Time:          1.27353
+Trial Time:          1.30328
+Trial Time:          0.93784
+Trial Time:          1.28066
+Trial Time:          1.09316
+Trial Time:          1.27893
+Trial Time:          1.29274
+Trial Time:          1.02454
+Trial Time:          1.38340
+Trial Time:          1.32816
+Trial Time:          1.10600
+Trial Time:          1.38484
+Trial Time:          1.32042
+Trial Time:          1.15834
+Trial Time:          1.27939
+Trial Time:          1.13489
+Trial Time:          1.39112
+Trial Time:          1.42595
+Trial Time:          0.89682
+Trial Time:          1.11412
+Trial Time:          1.34802
+Trial Time:          1.35871
+Trial Time:          1.23172
+Trial Time:          1.25142
+Trial Time:          1.08139
+Trial Time:          1.28666
+Trial Time:          1.28084
+Trial Time:          1.26281
+Trial Time:          1.35003
+Trial Time:          1.48694
+Trial Time:          1.38697
+Trial Time:          0.96252
+Trial Time:          1.32913
+Trial Time:          1.37456
+Trial Time:          1.23207
+Trial Time:          1.33369
+Trial Time:          1.13702
+Trial Time:          1.10801
+Trial Time:          1.33218
+Trial Time:          1.26773
+Average Time:        1.22110
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/RD/graph_9.sg -n 100
+output is: 
+Read Time:           9.20119
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2 Estimated size: 402 MB
+Trial Time:          1.52357
+Trial Time:          1.32767
+Trial Time:          1.17615
+Trial Time:          1.04398
+Trial Time:          1.15077
+Trial Time:          1.22601
+Trial Time:          1.03469
+Trial Time:          1.05630
+Trial Time:          1.41998
+Trial Time:          1.03033
+Trial Time:          1.41799
+Trial Time:          1.44889
+Trial Time:          1.45308
+Trial Time:          1.20365
+Trial Time:          1.13075
+Trial Time:          1.30410
+Trial Time:          1.30224
+Trial Time:          1.24041
+Trial Time:          1.25163
+Trial Time:          1.10216
+Trial Time:          0.98690
+Trial Time:          1.30179
+Trial Time:          1.49336
+Trial Time:          1.51479
+Trial Time:          1.31247
+Trial Time:          1.38433
+Trial Time:          1.48547
+Trial Time:          1.54732
+Trial Time:          1.51300
+Trial Time:          1.40756
+Trial Time:          1.38912
+Trial Time:          1.20673
+Trial Time:          1.32683
+Trial Time:          1.30600
+Trial Time:          1.10621
+Trial Time:          1.25764
+Trial Time:          1.15714
+Trial Time:          1.25532
+Trial Time:          1.13173
+Trial Time:          1.06196
+Trial Time:          1.19506
+Trial Time:          1.23374
+Trial Time:          1.34170
+Trial Time:          1.41510
+Trial Time:          1.37691
+Trial Time:          1.36307
+Trial Time:          1.27758
+Trial Time:          1.17720
+Trial Time:          1.21656
+Trial Time:          1.11120
+Trial Time:          1.31984
+Trial Time:          1.24146
+Trial Time:          1.26662
+Trial Time:          1.07934
+Trial Time:          1.17477
+Trial Time:          1.20935
+Trial Time:          1.29882
+Trial Time:          1.22716
+Trial Time:          1.29316
+Trial Time:          1.29077
+Trial Time:          1.31314
+Trial Time:          1.28421
+Trial Time:          1.13997
+Trial Time:          1.04031
+Trial Time:          1.21858
+Trial Time:          1.15845
+Trial Time:          1.06926
+Trial Time:          1.21965
+Trial Time:          1.23549
+Trial Time:          1.18372
+Trial Time:          1.05293
+Trial Time:          1.12164
+Trial Time:          0.93583
+Trial Time:          0.96788
+Trial Time:          1.23588
+Trial Time:          1.21553
+Trial Time:          1.33909
+Trial Time:          0.95089
+Trial Time:          0.98243
+Trial Time:          0.99229
+Trial Time:          1.24221
+Trial Time:          1.18878
+Trial Time:          1.29043
+Trial Time:          1.39932
+Trial Time:          1.35346
+Trial Time:          1.28625
+Trial Time:          1.30946
+Trial Time:          1.24598
+Trial Time:          0.99874
+Trial Time:          1.08287
+Trial Time:          1.01224
+Trial Time:          1.08599
+Trial Time:          1.25443
+Trial Time:          1.04785
+Trial Time:          0.91485
+Trial Time:          0.92428
+Trial Time:          1.03741
+Trial Time:          0.91909
+Trial Time:          0.82306
+Trial Time:          0.93752
+Average Time:        1.21111
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/RD/graph_10.sg -n 100
+output is: 
+Read Time:           10.22267
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2 Estimated size: 402 MB
+Trial Time:          1.90695
+Trial Time:          1.63893
+Trial Time:          1.62351
+Trial Time:          1.56747
+Trial Time:          1.63849
+Trial Time:          1.58924
+Trial Time:          1.32850
+Trial Time:          1.10643
+Trial Time:          1.37729
+Trial Time:          1.16916
+Trial Time:          1.62266
+Trial Time:          1.40447
+Trial Time:          1.56865
+Trial Time:          1.30302
+Trial Time:          1.29060
+Trial Time:          1.26169
+Trial Time:          1.35082
+Trial Time:          1.15247
+Trial Time:          1.65327
+Trial Time:          1.81737
+Trial Time:          1.39979
+Trial Time:          1.17460
+Trial Time:          1.27201
+Trial Time:          1.50960
+Trial Time:          1.61594
+Trial Time:          1.44364
+Trial Time:          1.35753
+Trial Time:          1.39287
+Trial Time:          1.51611
+Trial Time:          1.59439
+Trial Time:          1.41737
+Trial Time:          1.27622
+Trial Time:          1.31785
+Trial Time:          1.09874
+Trial Time:          1.60301
+Trial Time:          1.63028
+Trial Time:          1.51865
+Trial Time:          1.18323
+Trial Time:          1.44116
+Trial Time:          1.09327
+Trial Time:          1.56294
+Trial Time:          1.61939
+Trial Time:          1.52769
+Trial Time:          1.58193
+Trial Time:          1.62742
+Trial Time:          1.69621
+Trial Time:          1.58656
+Trial Time:          1.21363
+Trial Time:          1.27182
+Trial Time:          1.53613
+Trial Time:          1.09711
+Trial Time:          1.54187
+Trial Time:          1.35510
+Trial Time:          1.40404
+Trial Time:          1.61775
+Trial Time:          1.47347
+Trial Time:          1.61598
+Trial Time:          1.18228
+Trial Time:          1.47399
+Trial Time:          1.31373
+Trial Time:          2.11273
+Trial Time:          1.33044
+Trial Time:          1.67199
+Trial Time:          1.78625
+Trial Time:          1.63752
+Trial Time:          1.60238
+Trial Time:          1.40365
+Trial Time:          1.69425
+Trial Time:          1.67291
+Trial Time:          1.53647
+Trial Time:          1.48786
+Trial Time:          1.39602
+Trial Time:          1.57267
+Trial Time:          1.55539
+Trial Time:          1.11285
+Trial Time:          1.32272
+Trial Time:          1.15348
+Trial Time:          1.63904
+Trial Time:          1.39363
+Trial Time:          1.65009
+Trial Time:          1.40594
+Trial Time:          1.60080
+Trial Time:          1.50912
+Trial Time:          1.14703
+Trial Time:          1.72037
+Trial Time:          1.56361
+Trial Time:          1.42302
+Trial Time:          1.76752
+Trial Time:          1.26108
+Trial Time:          1.33093
+Trial Time:          1.50566
+Trial Time:          1.21762
+Trial Time:          1.61223
+Trial Time:          1.67995
+Trial Time:          1.34038
+Trial Time:          1.55563
+Trial Time:          1.34138
+Trial Time:          1.35600
+Trial Time:          1.16195
+Trial Time:          1.58846
+Average Time:        1.46347
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/RD/graph_11.sg -n 100
+output is: 
+Read Time:           9.92687
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2 Estimated size: 402 MB
+Trial Time:          1.35842
+Trial Time:          1.57110
+Trial Time:          1.30606
+Trial Time:          1.25813
+Trial Time:          1.42943
+Trial Time:          0.99888
+Trial Time:          0.99186
+Trial Time:          1.25082
+Trial Time:          0.93138
+Trial Time:          1.40686
+Trial Time:          1.53332
+Trial Time:          1.44650
+Trial Time:          1.46551
+Trial Time:          1.50547
+Trial Time:          1.38752
+Trial Time:          1.28185
+Trial Time:          1.20343
+Trial Time:          1.29067
+Trial Time:          1.20357
+Trial Time:          1.04884
+Trial Time:          1.10500
+Trial Time:          1.07115
+Trial Time:          1.06346
+Trial Time:          1.04406
+Trial Time:          1.04926
+Trial Time:          0.99837
+Trial Time:          1.07343
+Trial Time:          1.10112
+Trial Time:          1.08582
+Trial Time:          1.26167
+Trial Time:          1.16596
+Trial Time:          1.23087
+Trial Time:          1.21620
+Trial Time:          1.15766
+Trial Time:          1.27235
+Trial Time:          1.49707
+Trial Time:          1.38400
+Trial Time:          1.38931
+Trial Time:          1.33712
+Trial Time:          1.33529
+Trial Time:          1.36443
+Trial Time:          1.40855
+Trial Time:          1.48457
+Trial Time:          1.31137
+Trial Time:          1.46664
+Trial Time:          1.34346
+Trial Time:          1.27950
+Trial Time:          1.19367
+Trial Time:          1.27754
+Trial Time:          1.33819
+Trial Time:          1.42040
+Trial Time:          1.27887
+Trial Time:          1.23026
+Trial Time:          1.32169
+Trial Time:          1.25401
+Trial Time:          1.39334
+Trial Time:          1.37218
+Trial Time:          1.13628
+Trial Time:          1.14544
+Trial Time:          1.07504
+Trial Time:          0.85727
+Trial Time:          1.12046
+Trial Time:          1.09023
+Trial Time:          0.94826
+Trial Time:          0.93939
+Trial Time:          0.95276
+Trial Time:          1.23685
+Trial Time:          0.92540
+Trial Time:          0.98723
+Trial Time:          0.97263
+Trial Time:          1.27714
+Trial Time:          1.31862
+Trial Time:          1.08094
+Trial Time:          1.08423
+Trial Time:          1.17927
+Trial Time:          1.16219
+Trial Time:          1.17492
+Trial Time:          1.06829
+Trial Time:          1.31980
+Trial Time:          1.06740
+Trial Time:          1.20902
+Trial Time:          1.29502
+Trial Time:          1.27802
+Trial Time:          1.16396
+Trial Time:          1.25956
+Trial Time:          1.29776
+Trial Time:          1.19776
+Trial Time:          1.34175
+Trial Time:          1.37164
+Trial Time:          1.28338
+Trial Time:          1.31366
+Trial Time:          1.17607
+Trial Time:          1.13924
+Trial Time:          1.21019
+Trial Time:          1.21883
+Trial Time:          1.17914
+Trial Time:          1.16002
+Trial Time:          1.16949
+Trial Time:          1.23252
+Trial Time:          1.14439
+Average Time:        1.22209
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_0.sg -n 100
+output is: 
+Read Time:           2.16527
+Graph has 3774768 nodes and 16518947 directed edges for degree: 4 Estimated size: 91 MB
+Trial Time:          0.00687
+Trial Time:          0.00712
+Trial Time:          0.00552
+Trial Time:          0.00572
+Trial Time:          0.00461
+Trial Time:          0.00419
+Trial Time:          0.00581
+Trial Time:          0.00552
+Trial Time:          0.00462
+Trial Time:          0.00456
+Trial Time:          0.00427
+Trial Time:          0.00386
+Trial Time:          0.00425
+Trial Time:          0.00376
+Trial Time:          0.00379
+Trial Time:          0.00421
+Trial Time:          0.00328
+Trial Time:          0.00305
+Trial Time:          0.00274
+Trial Time:          0.00242
+Trial Time:          0.00275
+Trial Time:          0.00340
+Trial Time:          0.00324
+Trial Time:          0.00330
+Trial Time:          0.00385
+Trial Time:          0.00326
+Trial Time:          0.00269
+Trial Time:          0.00248
+Trial Time:          0.00311
+Trial Time:          0.00272
+Trial Time:          0.00257
+Trial Time:          0.00278
+Trial Time:          0.00303
+Trial Time:          0.00278
+Trial Time:          0.00282
+Trial Time:          0.00308
+Trial Time:          0.00299
+Trial Time:          0.00311
+Trial Time:          0.00249
+Trial Time:          0.00229
+Trial Time:          0.00290
+Trial Time:          0.00374
+Trial Time:          0.00338
+Trial Time:          0.00410
+Trial Time:          0.00422
+Trial Time:          0.00493
+Trial Time:          0.00583
+Trial Time:          0.00489
+Trial Time:          0.00559
+Trial Time:          0.00540
+Trial Time:          0.00427
+Trial Time:          0.00336
+Trial Time:          0.00453
+Trial Time:          0.00413
+Trial Time:          0.00437
+Trial Time:          0.00366
+Trial Time:          0.00447
+Trial Time:          0.00666
+Trial Time:          0.00397
+Trial Time:          0.00415
+Trial Time:          0.00489
+Trial Time:          0.00378
+Trial Time:          0.00482
+Trial Time:          0.00664
+Trial Time:          0.00526
+Trial Time:          0.00655
+Trial Time:          0.00614
+Trial Time:          0.00374
+Trial Time:          0.00219
+Trial Time:          0.00275
+Trial Time:          0.00328
+Trial Time:          0.00328
+Trial Time:          0.00322
+Trial Time:          0.00313
+Trial Time:          0.00333
+Trial Time:          0.00341
+Trial Time:          0.00325
+Trial Time:          0.00276
+Trial Time:          0.00332
+Trial Time:          0.00387
+Trial Time:          0.00298
+Trial Time:          0.00393
+Trial Time:          0.00611
+Trial Time:          0.00647
+Trial Time:          0.00595
+Trial Time:          0.00608
+Trial Time:          0.00543
+Trial Time:          0.00456
+Trial Time:          0.00397
+Trial Time:          0.00639
+Trial Time:          0.00584
+Trial Time:          0.00395
+Trial Time:          0.00408
+Trial Time:          0.00376
+Trial Time:          0.00406
+Trial Time:          0.00441
+Trial Time:          0.00278
+Trial Time:          0.00329
+Trial Time:          0.00440
+Trial Time:          0.00296
+Average Time:        0.00408
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_5.sg -n 100
+output is: 
+Read Time:           1.97647
+Graph has 3774768 nodes and 16518947 directed edges for degree: 4 Estimated size: 91 MB
+Trial Time:          0.00692
+Trial Time:          0.00600
+Trial Time:          0.00535
+Trial Time:          0.00557
+Trial Time:          0.00552
+Trial Time:          0.00511
+Trial Time:          0.00482
+Trial Time:          0.00468
+Trial Time:          0.00482
+Trial Time:          0.00478
+Trial Time:          0.00451
+Trial Time:          0.00522
+Trial Time:          0.00487
+Trial Time:          0.00445
+Trial Time:          0.00399
+Trial Time:          0.00415
+Trial Time:          0.00411
+Trial Time:          0.00316
+Trial Time:          0.00307
+Trial Time:          0.00245
+Trial Time:          0.00279
+Trial Time:          0.00233
+Trial Time:          0.00226
+Trial Time:          0.00229
+Trial Time:          0.00232
+Trial Time:          0.00231
+Trial Time:          0.00256
+Trial Time:          0.00231
+Trial Time:          0.00322
+Trial Time:          0.00281
+Trial Time:          0.00254
+Trial Time:          0.00276
+Trial Time:          0.00283
+Trial Time:          0.00288
+Trial Time:          0.00286
+Trial Time:          0.00274
+Trial Time:          0.00267
+Trial Time:          0.00276
+Trial Time:          0.00352
+Trial Time:          0.00399
+Trial Time:          0.00416
+Trial Time:          0.00435
+Trial Time:          0.00483
+Trial Time:          0.00366
+Trial Time:          0.00351
+Trial Time:          0.00396
+Trial Time:          0.00448
+Trial Time:          0.00286
+Trial Time:          0.00352
+Trial Time:          0.00349
+Trial Time:          0.00473
+Trial Time:          0.00456
+Trial Time:          0.00407
+Trial Time:          0.00412
+Trial Time:          0.00457
+Trial Time:          0.00555
+Trial Time:          0.00419
+Trial Time:          0.00574
+Trial Time:          0.00500
+Trial Time:          0.00492
+Trial Time:          0.00570
+Trial Time:          0.00359
+Trial Time:          0.00371
+Trial Time:          0.00554
+Trial Time:          0.00539
+Trial Time:          0.00695
+Trial Time:          0.00507
+Trial Time:          0.00509
+Trial Time:          0.00377
+Trial Time:          0.00480
+Trial Time:          0.00485
+Trial Time:          0.00444
+Trial Time:          0.00365
+Trial Time:          0.00315
+Trial Time:          0.00293
+Trial Time:          0.00307
+Trial Time:          0.00323
+Trial Time:          0.00306
+Trial Time:          0.00440
+Trial Time:          0.00384
+Trial Time:          0.00415
+Trial Time:          0.00614
+Trial Time:          0.00658
+Trial Time:          0.00681
+Trial Time:          0.00585
+Trial Time:          0.00480
+Trial Time:          0.00478
+Trial Time:          0.00432
+Trial Time:          0.00278
+Trial Time:          0.00527
+Trial Time:          0.00381
+Trial Time:          0.00290
+Trial Time:          0.00277
+Trial Time:          0.00239
+Trial Time:          0.00246
+Trial Time:          0.00413
+Trial Time:          0.00399
+Trial Time:          0.00456
+Trial Time:          0.00504
+Trial Time:          0.00489
+Average Time:        0.00409
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_8.sg -n 100
+output is: 
+Read Time:           2.31242
+Graph has 3774768 nodes and 16518947 directed edges for degree: 4 Estimated size: 91 MB
+Trial Time:          0.00535
+Trial Time:          0.00453
+Trial Time:          0.00398
+Trial Time:          0.00435
+Trial Time:          0.00409
+Trial Time:          0.00411
+Trial Time:          0.00385
+Trial Time:          0.00379
+Trial Time:          0.00386
+Trial Time:          0.00360
+Trial Time:          0.00445
+Trial Time:          0.00340
+Trial Time:          0.00303
+Trial Time:          0.00354
+Trial Time:          0.00369
+Trial Time:          0.00318
+Trial Time:          0.00315
+Trial Time:          0.00389
+Trial Time:          0.00437
+Trial Time:          0.00452
+Trial Time:          0.00508
+Trial Time:          0.00399
+Trial Time:          0.00434
+Trial Time:          0.00433
+Trial Time:          0.00448
+Trial Time:          0.00321
+Trial Time:          0.00361
+Trial Time:          0.00427
+Trial Time:          0.00497
+Trial Time:          0.00427
+Trial Time:          0.00460
+Trial Time:          0.00380
+Trial Time:          0.00361
+Trial Time:          0.00377
+Trial Time:          0.00372
+Trial Time:          0.00347
+Trial Time:          0.00314
+Trial Time:          0.00339
+Trial Time:          0.00414
+Trial Time:          0.00421
+Trial Time:          0.00439
+Trial Time:          0.00470
+Trial Time:          0.00526
+Trial Time:          0.00611
+Trial Time:          0.00436
+Trial Time:          0.00457
+Trial Time:          0.00568
+Trial Time:          0.00337
+Trial Time:          0.00425
+Trial Time:          0.00433
+Trial Time:          0.00451
+Trial Time:          0.00499
+Trial Time:          0.00647
+Trial Time:          0.00562
+Trial Time:          0.00570
+Trial Time:          0.00449
+Trial Time:          0.00461
+Trial Time:          0.00721
+Trial Time:          0.00776
+Trial Time:          0.00676
+Trial Time:          0.00766
+Trial Time:          0.00636
+Trial Time:          0.00895
+Trial Time:          0.00850
+Trial Time:          0.00637
+Trial Time:          0.00704
+Trial Time:          0.00548
+Trial Time:          0.00773
+Trial Time:          0.00514
+Trial Time:          0.00591
+Trial Time:          0.00612
+Trial Time:          0.00649
+Trial Time:          0.00687
+Trial Time:          0.00658
+Trial Time:          0.00650
+Trial Time:          0.00608
+Trial Time:          0.00441
+Trial Time:          0.00391
+Trial Time:          0.00432
+Trial Time:          0.00703
+Trial Time:          0.00609
+Trial Time:          0.00517
+Trial Time:          0.00484
+Trial Time:          0.00581
+Trial Time:          0.00402
+Trial Time:          0.00409
+Trial Time:          0.00382
+Trial Time:          0.00359
+Trial Time:          0.00384
+Trial Time:          0.00579
+Trial Time:          0.00388
+Trial Time:          0.00383
+Trial Time:          0.00308
+Trial Time:          0.00277
+Trial Time:          0.00254
+Trial Time:          0.00312
+Trial Time:          0.00254
+Trial Time:          0.00261
+Trial Time:          0.00346
+Trial Time:          0.00577
+Average Time:        0.00472
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_9.sg -n 100
+output is: 
+Read Time:           2.00084
+Graph has 3774768 nodes and 16518947 directed edges for degree: 4 Estimated size: 91 MB
+Trial Time:          0.00578
+Trial Time:          0.00517
+Trial Time:          0.00464
+Trial Time:          0.00498
+Trial Time:          0.00498
+Trial Time:          0.00457
+Trial Time:          0.00425
+Trial Time:          0.00429
+Trial Time:          0.00433
+Trial Time:          0.00456
+Trial Time:          0.00480
+Trial Time:          0.00493
+Trial Time:          0.00450
+Trial Time:          0.00437
+Trial Time:          0.00567
+Trial Time:          0.00464
+Trial Time:          0.00398
+Trial Time:          0.00362
+Trial Time:          0.00320
+Trial Time:          0.00268
+Trial Time:          0.00290
+Trial Time:          0.00300
+Trial Time:          0.00316
+Trial Time:          0.00392
+Trial Time:          0.00433
+Trial Time:          0.00466
+Trial Time:          0.00473
+Trial Time:          0.00480
+Trial Time:          0.00617
+Trial Time:          0.00521
+Trial Time:          0.00488
+Trial Time:          0.00512
+Trial Time:          0.00488
+Trial Time:          0.00496
+Trial Time:          0.00534
+Trial Time:          0.00516
+Trial Time:          0.00496
+Trial Time:          0.00483
+Trial Time:          0.00485
+Trial Time:          0.00457
+Trial Time:          0.00446
+Trial Time:          0.00447
+Trial Time:          0.00456
+Trial Time:          0.00546
+Trial Time:          0.00386
+Trial Time:          0.00479
+Trial Time:          0.00530
+Trial Time:          0.00337
+Trial Time:          0.00427
+Trial Time:          0.00351
+Trial Time:          0.00498
+Trial Time:          0.00465
+Trial Time:          0.00459
+Trial Time:          0.00468
+Trial Time:          0.00514
+Trial Time:          0.00418
+Trial Time:          0.00368
+Trial Time:          0.00544
+Trial Time:          0.00571
+Trial Time:          0.00552
+Trial Time:          0.00462
+Trial Time:          0.00319
+Trial Time:          0.00370
+Trial Time:          0.00525
+Trial Time:          0.00342
+Trial Time:          0.00465
+Trial Time:          0.00292
+Trial Time:          0.00265
+Trial Time:          0.00218
+Trial Time:          0.00270
+Trial Time:          0.00269
+Trial Time:          0.00289
+Trial Time:          0.00301
+Trial Time:          0.00314
+Trial Time:          0.00319
+Trial Time:          0.00308
+Trial Time:          0.00423
+Trial Time:          0.00416
+Trial Time:          0.00469
+Trial Time:          0.00557
+Trial Time:          0.00511
+Trial Time:          0.00565
+Trial Time:          0.00497
+Trial Time:          0.00399
+Trial Time:          0.00359
+Trial Time:          0.00429
+Trial Time:          0.00409
+Trial Time:          0.00289
+Trial Time:          0.00230
+Trial Time:          0.00373
+Trial Time:          0.00284
+Trial Time:          0.00308
+Trial Time:          0.00372
+Trial Time:          0.00393
+Trial Time:          0.00412
+Trial Time:          0.00440
+Trial Time:          0.00373
+Trial Time:          0.00322
+Trial Time:          0.00361
+Trial Time:          0.00358
+Average Time:        0.00424
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_10.sg -n 100
+output is: 
+Read Time:           2.28650
+Graph has 3774768 nodes and 16518947 directed edges for degree: 4 Estimated size: 91 MB
+Trial Time:          0.00600
+Trial Time:          0.00542
+Trial Time:          0.00569
+Trial Time:          0.00569
+Trial Time:          0.00485
+Trial Time:          0.00503
+Trial Time:          0.00478
+Trial Time:          0.00480
+Trial Time:          0.00431
+Trial Time:          0.00447
+Trial Time:          0.00436
+Trial Time:          0.00385
+Trial Time:          0.00401
+Trial Time:          0.00430
+Trial Time:          0.00359
+Trial Time:          0.00388
+Trial Time:          0.00377
+Trial Time:          0.00354
+Trial Time:          0.00297
+Trial Time:          0.00269
+Trial Time:          0.00266
+Trial Time:          0.00260
+Trial Time:          0.00253
+Trial Time:          0.00259
+Trial Time:          0.00254
+Trial Time:          0.00262
+Trial Time:          0.00258
+Trial Time:          0.00247
+Trial Time:          0.00332
+Trial Time:          0.00300
+Trial Time:          0.00285
+Trial Time:          0.00275
+Trial Time:          0.00307
+Trial Time:          0.00305
+Trial Time:          0.00297
+Trial Time:          0.00322
+Trial Time:          0.00341
+Trial Time:          0.00420
+Trial Time:          0.00476
+Trial Time:          0.00450
+Trial Time:          0.00457
+Trial Time:          0.00478
+Trial Time:          0.00520
+Trial Time:          0.00432
+Trial Time:          0.00357
+Trial Time:          0.00541
+Trial Time:          0.00718
+Trial Time:          0.00558
+Trial Time:          0.00609
+Trial Time:          0.00584
+Trial Time:          0.00636
+Trial Time:          0.00648
+Trial Time:          0.00631
+Trial Time:          0.00609
+Trial Time:          0.00724
+Trial Time:          0.00646
+Trial Time:          0.00482
+Trial Time:          0.00704
+Trial Time:          0.00645
+Trial Time:          0.00668
+Trial Time:          0.00734
+Trial Time:          0.00598
+Trial Time:          0.00645
+Trial Time:          0.00901
+Trial Time:          0.00737
+Trial Time:          0.00923
+Trial Time:          0.00673
+Trial Time:          0.00403
+Trial Time:          0.00291
+Trial Time:          0.00551
+Trial Time:          0.00570
+Trial Time:          0.00632
+Trial Time:          0.00620
+Trial Time:          0.00487
+Trial Time:          0.00481
+Trial Time:          0.00401
+Trial Time:          0.00411
+Trial Time:          0.00395
+Trial Time:          0.00426
+Trial Time:          0.00522
+Trial Time:          0.00479
+Trial Time:          0.00561
+Trial Time:          0.00502
+Trial Time:          0.00653
+Trial Time:          0.00563
+Trial Time:          0.00563
+Trial Time:          0.00562
+Trial Time:          0.00473
+Trial Time:          0.00384
+Trial Time:          0.00617
+Trial Time:          0.00557
+Trial Time:          0.00325
+Trial Time:          0.00303
+Trial Time:          0.00308
+Trial Time:          0.00288
+Trial Time:          0.00326
+Trial Time:          0.00386
+Trial Time:          0.00468
+Trial Time:          0.00621
+Trial Time:          0.00560
+Average Time:        0.00475
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_11.sg -n 100
+output is: 
+Read Time:           2.22229
+Graph has 3774768 nodes and 16518947 directed edges for degree: 4 Estimated size: 91 MB
+Trial Time:          0.00618
+Trial Time:          0.00622
+Trial Time:          0.00501
+Trial Time:          0.00498
+Trial Time:          0.00616
+Trial Time:          0.00564
+Trial Time:          0.00456
+Trial Time:          0.00471
+Trial Time:          0.00418
+Trial Time:          0.00422
+Trial Time:          0.00443
+Trial Time:          0.00409
+Trial Time:          0.00412
+Trial Time:          0.00434
+Trial Time:          0.00456
+Trial Time:          0.00476
+Trial Time:          0.00436
+Trial Time:          0.00416
+Trial Time:          0.00391
+Trial Time:          0.00415
+Trial Time:          0.00425
+Trial Time:          0.00386
+Trial Time:          0.00367
+Trial Time:          0.00375
+Trial Time:          0.00448
+Trial Time:          0.00358
+Trial Time:          0.00319
+Trial Time:          0.00331
+Trial Time:          0.00457
+Trial Time:          0.00366
+Trial Time:          0.00358
+Trial Time:          0.00368
+Trial Time:          0.00330
+Trial Time:          0.00345
+Trial Time:          0.00424
+Trial Time:          0.00422
+Trial Time:          0.00348
+Trial Time:          0.00362
+Trial Time:          0.00316
+Trial Time:          0.00405
+Trial Time:          0.00318
+Trial Time:          0.00327
+Trial Time:          0.00316
+Trial Time:          0.00412
+Trial Time:          0.00393
+Trial Time:          0.00437
+Trial Time:          0.00471
+Trial Time:          0.00302
+Trial Time:          0.00461
+Trial Time:          0.00431
+Trial Time:          0.00508
+Trial Time:          0.00426
+Trial Time:          0.00368
+Trial Time:          0.00331
+Trial Time:          0.00367
+Trial Time:          0.00329
+Trial Time:          0.00293
+Trial Time:          0.00423
+Trial Time:          0.00344
+Trial Time:          0.00319
+Trial Time:          0.00393
+Trial Time:          0.00350
+Trial Time:          0.00442
+Trial Time:          0.00564
+Trial Time:          0.00380
+Trial Time:          0.00418
+Trial Time:          0.00377
+Trial Time:          0.00454
+Trial Time:          0.00240
+Trial Time:          0.00448
+Trial Time:          0.00427
+Trial Time:          0.00488
+Trial Time:          0.00582
+Trial Time:          0.00589
+Trial Time:          0.00621
+Trial Time:          0.00641
+Trial Time:          0.00662
+Trial Time:          0.00576
+Trial Time:          0.00779
+Trial Time:          0.00658
+Trial Time:          0.00573
+Trial Time:          0.00718
+Trial Time:          0.00653
+Trial Time:          0.00512
+Trial Time:          0.00446
+Trial Time:          0.00484
+Trial Time:          0.00433
+Trial Time:          0.00324
+Trial Time:          0.00362
+Trial Time:          0.00443
+Trial Time:          0.00279
+Trial Time:          0.00320
+Trial Time:          0.00300
+Trial Time:          0.00303
+Trial Time:          0.00414
+Trial Time:          0.00359
+Trial Time:          0.00266
+Trial Time:          0.00341
+Trial Time:          0.00486
+Trial Time:          0.00388
+Average Time:        0.00431
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_0.sg -n 100
+output is: 
+Read Time:           2.74934
+Graph has 1632803 nodes and 30622564 directed edges for degree: 18 Estimated size: 129 MB
+Trial Time:          0.04089
+Trial Time:          0.02942
+Trial Time:          0.02849
+Trial Time:          0.02779
+Trial Time:          0.02812
+Trial Time:          0.02807
+Trial Time:          0.02820
+Trial Time:          0.02755
+Trial Time:          0.02807
+Trial Time:          0.03093
+Trial Time:          0.02798
+Trial Time:          0.02827
+Trial Time:          0.02891
+Trial Time:          0.02815
+Trial Time:          0.02843
+Trial Time:          0.02706
+Trial Time:          0.02689
+Trial Time:          0.02698
+Trial Time:          0.02787
+Trial Time:          0.02764
+Trial Time:          0.02769
+Trial Time:          0.02736
+Trial Time:          0.02737
+Trial Time:          0.02845
+Trial Time:          0.03058
+Trial Time:          0.02763
+Trial Time:          0.02692
+Trial Time:          0.02839
+Trial Time:          0.02908
+Trial Time:          0.02836
+Trial Time:          0.02835
+Trial Time:          0.02825
+Trial Time:          0.02891
+Trial Time:          0.02854
+Trial Time:          0.02808
+Trial Time:          0.02828
+Trial Time:          0.02806
+Trial Time:          0.02843
+Trial Time:          0.02755
+Trial Time:          0.02846
+Trial Time:          0.02910
+Trial Time:          0.02819
+Trial Time:          0.02891
+Trial Time:          0.02751
+Trial Time:          0.02778
+Trial Time:          0.02806
+Trial Time:          0.02939
+Trial Time:          0.02781
+Trial Time:          0.02728
+Trial Time:          0.02748
+Trial Time:          0.02838
+Trial Time:          0.02733
+Trial Time:          0.02760
+Trial Time:          0.02764
+Trial Time:          0.02775
+Trial Time:          0.02759
+Trial Time:          0.02738
+Trial Time:          0.02836
+Trial Time:          0.02718
+Trial Time:          0.02786
+Trial Time:          0.02831
+Trial Time:          0.02808
+Trial Time:          0.02806
+Trial Time:          0.02747
+Trial Time:          0.02790
+Trial Time:          0.02700
+Trial Time:          0.02779
+Trial Time:          0.02765
+Trial Time:          0.02802
+Trial Time:          0.02825
+Trial Time:          0.02752
+Trial Time:          0.02810
+Trial Time:          0.02761
+Trial Time:          0.02852
+Trial Time:          0.02714
+Trial Time:          0.02804
+Trial Time:          0.02800
+Trial Time:          0.02716
+Trial Time:          0.02876
+Trial Time:          0.02818
+Trial Time:          0.02804
+Trial Time:          0.02780
+Trial Time:          0.02824
+Trial Time:          0.02762
+Trial Time:          0.02750
+Trial Time:          0.02803
+Trial Time:          0.02845
+Trial Time:          0.02866
+Trial Time:          0.02820
+Trial Time:          0.02842
+Trial Time:          0.03629
+Trial Time:          0.02953
+Trial Time:          0.02868
+Trial Time:          0.02801
+Trial Time:          0.02719
+Trial Time:          0.02700
+Trial Time:          0.02774
+Trial Time:          0.02734
+Trial Time:          0.02800
+Trial Time:          0.02795
+Average Time:        0.02825
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_5.sg -n 100
+output is: 
+Read Time:           2.69281
+Graph has 1632803 nodes and 30622564 directed edges for degree: 18 Estimated size: 129 MB
+Trial Time:          0.03922
+Trial Time:          0.02989
+Trial Time:          0.02503
+Trial Time:          0.02588
+Trial Time:          0.02628
+Trial Time:          0.02584
+Trial Time:          0.02531
+Trial Time:          0.02501
+Trial Time:          0.02518
+Trial Time:          0.02501
+Trial Time:          0.02537
+Trial Time:          0.02493
+Trial Time:          0.02552
+Trial Time:          0.02578
+Trial Time:          0.02498
+Trial Time:          0.02456
+Trial Time:          0.02495
+Trial Time:          0.02525
+Trial Time:          0.02489
+Trial Time:          0.02473
+Trial Time:          0.02488
+Trial Time:          0.02538
+Trial Time:          0.02549
+Trial Time:          0.02536
+Trial Time:          0.02559
+Trial Time:          0.02540
+Trial Time:          0.02524
+Trial Time:          0.02574
+Trial Time:          0.02667
+Trial Time:          0.02563
+Trial Time:          0.02559
+Trial Time:          0.02613
+Trial Time:          0.02609
+Trial Time:          0.02586
+Trial Time:          0.02494
+Trial Time:          0.02465
+Trial Time:          0.02489
+Trial Time:          0.02543
+Trial Time:          0.02530
+Trial Time:          0.02513
+Trial Time:          0.02565
+Trial Time:          0.02569
+Trial Time:          0.02588
+Trial Time:          0.02533
+Trial Time:          0.02551
+Trial Time:          0.02561
+Trial Time:          0.02552
+Trial Time:          0.02578
+Trial Time:          0.02506
+Trial Time:          0.02509
+Trial Time:          0.02610
+Trial Time:          0.02570
+Trial Time:          0.02593
+Trial Time:          0.02600
+Trial Time:          0.02581
+Trial Time:          0.02729
+Trial Time:          0.02632
+Trial Time:          0.02635
+Trial Time:          0.02599
+Trial Time:          0.02595
+Trial Time:          0.02543
+Trial Time:          0.02595
+Trial Time:          0.02648
+Trial Time:          0.02613
+Trial Time:          0.02649
+Trial Time:          0.02513
+Trial Time:          0.02540
+Trial Time:          0.02550
+Trial Time:          0.02584
+Trial Time:          0.02533
+Trial Time:          0.02498
+Trial Time:          0.02592
+Trial Time:          0.02594
+Trial Time:          0.02594
+Trial Time:          0.02556
+Trial Time:          0.02540
+Trial Time:          0.02604
+Trial Time:          0.02567
+Trial Time:          0.02565
+Trial Time:          0.02577
+Trial Time:          0.02616
+Trial Time:          0.02604
+Trial Time:          0.02556
+Trial Time:          0.02495
+Trial Time:          0.02542
+Trial Time:          0.02546
+Trial Time:          0.02507
+Trial Time:          0.02582
+Trial Time:          0.02555
+Trial Time:          0.02582
+Trial Time:          0.02605
+Trial Time:          0.02587
+Trial Time:          0.02667
+Trial Time:          0.02568
+Trial Time:          0.02629
+Trial Time:          0.02508
+Trial Time:          0.02565
+Trial Time:          0.02542
+Trial Time:          0.02600
+Trial Time:          0.02629
+Average Time:        0.02579
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_8.sg -n 100
+output is: 
+Read Time:           2.88760
+Graph has 1632803 nodes and 30622564 directed edges for degree: 18 Estimated size: 129 MB
+Trial Time:          0.03838
+Trial Time:          0.03170
+Trial Time:          0.02656
+Trial Time:          0.02486
+Trial Time:          0.02482
+Trial Time:          0.02557
+Trial Time:          0.02488
+Trial Time:          0.02471
+Trial Time:          0.02495
+Trial Time:          0.02512
+Trial Time:          0.02539
+Trial Time:          0.02424
+Trial Time:          0.02479
+Trial Time:          0.02516
+Trial Time:          0.02466
+Trial Time:          0.02543
+Trial Time:          0.02495
+Trial Time:          0.02499
+Trial Time:          0.02496
+Trial Time:          0.02513
+Trial Time:          0.02491
+Trial Time:          0.02472
+Trial Time:          0.02455
+Trial Time:          0.02496
+Trial Time:          0.02501
+Trial Time:          0.02525
+Trial Time:          0.02521
+Trial Time:          0.02485
+Trial Time:          0.02506
+Trial Time:          0.02530
+Trial Time:          0.02531
+Trial Time:          0.02548
+Trial Time:          0.02518
+Trial Time:          0.02504
+Trial Time:          0.02488
+Trial Time:          0.02511
+Trial Time:          0.02539
+Trial Time:          0.02583
+Trial Time:          0.02553
+Trial Time:          0.02563
+Trial Time:          0.02564
+Trial Time:          0.02536
+Trial Time:          0.02522
+Trial Time:          0.02559
+Trial Time:          0.02516
+Trial Time:          0.02494
+Trial Time:          0.02498
+Trial Time:          0.02494
+Trial Time:          0.02540
+Trial Time:          0.02465
+Trial Time:          0.02475
+Trial Time:          0.02485
+Trial Time:          0.02491
+Trial Time:          0.02671
+Trial Time:          0.02579
+Trial Time:          0.02444
+Trial Time:          0.02466
+Trial Time:          0.02506
+Trial Time:          0.02480
+Trial Time:          0.02483
+Trial Time:          0.02497
+Trial Time:          0.02455
+Trial Time:          0.02504
+Trial Time:          0.02494
+Trial Time:          0.02501
+Trial Time:          0.02518
+Trial Time:          0.02568
+Trial Time:          0.02557
+Trial Time:          0.02498
+Trial Time:          0.02574
+Trial Time:          0.02559
+Trial Time:          0.02552
+Trial Time:          0.02454
+Trial Time:          0.02506
+Trial Time:          0.02452
+Trial Time:          0.02503
+Trial Time:          0.02573
+Trial Time:          0.02563
+Trial Time:          0.02501
+Trial Time:          0.02547
+Trial Time:          0.02480
+Trial Time:          0.02509
+Trial Time:          0.02506
+Trial Time:          0.02536
+Trial Time:          0.02544
+Trial Time:          0.02503
+Trial Time:          0.02488
+Trial Time:          0.02596
+Trial Time:          0.02561
+Trial Time:          0.02521
+Trial Time:          0.02563
+Trial Time:          0.02495
+Trial Time:          0.02490
+Trial Time:          0.02537
+Trial Time:          0.02481
+Trial Time:          0.02569
+Trial Time:          0.02535
+Trial Time:          0.02537
+Trial Time:          0.02590
+Trial Time:          0.02546
+Average Time:        0.02537
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_9.sg -n 100
+output is: 
+Read Time:           3.10030
+Graph has 1632803 nodes and 30622564 directed edges for degree: 18 Estimated size: 129 MB
+Trial Time:          0.03289
+Trial Time:          0.02685
+Trial Time:          0.02171
+Trial Time:          0.02167
+Trial Time:          0.02160
+Trial Time:          0.02172
+Trial Time:          0.02144
+Trial Time:          0.02090
+Trial Time:          0.02141
+Trial Time:          0.02138
+Trial Time:          0.02180
+Trial Time:          0.02194
+Trial Time:          0.02135
+Trial Time:          0.02130
+Trial Time:          0.02161
+Trial Time:          0.02121
+Trial Time:          0.02138
+Trial Time:          0.02127
+Trial Time:          0.02107
+Trial Time:          0.02155
+Trial Time:          0.02139
+Trial Time:          0.02126
+Trial Time:          0.02124
+Trial Time:          0.02210
+Trial Time:          0.02137
+Trial Time:          0.02097
+Trial Time:          0.02095
+Trial Time:          0.02085
+Trial Time:          0.02116
+Trial Time:          0.02068
+Trial Time:          0.02110
+Trial Time:          0.02126
+Trial Time:          0.02138
+Trial Time:          0.02138
+Trial Time:          0.02125
+Trial Time:          0.02099
+Trial Time:          0.02094
+Trial Time:          0.02100
+Trial Time:          0.02096
+Trial Time:          0.02098
+Trial Time:          0.02123
+Trial Time:          0.02177
+Trial Time:          0.02115
+Trial Time:          0.02128
+Trial Time:          0.02111
+Trial Time:          0.02156
+Trial Time:          0.02119
+Trial Time:          0.02114
+Trial Time:          0.02147
+Trial Time:          0.02111
+Trial Time:          0.02177
+Trial Time:          0.02182
+Trial Time:          0.02162
+Trial Time:          0.02182
+Trial Time:          0.02094
+Trial Time:          0.02114
+Trial Time:          0.02103
+Trial Time:          0.02131
+Trial Time:          0.02154
+Trial Time:          0.02159
+Trial Time:          0.02093
+Trial Time:          0.02117
+Trial Time:          0.02143
+Trial Time:          0.02104
+Trial Time:          0.02161
+Trial Time:          0.02158
+Trial Time:          0.02190
+Trial Time:          0.02208
+Trial Time:          0.02177
+Trial Time:          0.02260
+Trial Time:          0.02184
+Trial Time:          0.02123
+Trial Time:          0.02117
+Trial Time:          0.02305
+Trial Time:          0.02206
+Trial Time:          0.02109
+Trial Time:          0.02126
+Trial Time:          0.02122
+Trial Time:          0.02227
+Trial Time:          0.02211
+Trial Time:          0.02285
+Trial Time:          0.02202
+Trial Time:          0.02213
+Trial Time:          0.02185
+Trial Time:          0.02178
+Trial Time:          0.02149
+Trial Time:          0.02175
+Trial Time:          0.02128
+Trial Time:          0.02122
+Trial Time:          0.02122
+Trial Time:          0.02075
+Trial Time:          0.02068
+Trial Time:          0.02120
+Trial Time:          0.02132
+Trial Time:          0.02169
+Trial Time:          0.02187
+Trial Time:          0.02182
+Trial Time:          0.02107
+Trial Time:          0.02144
+Trial Time:          0.02161
+Average Time:        0.02161
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_10.sg -n 100
+output is: 
+Read Time:           2.72038
+Graph has 1632803 nodes and 30622564 directed edges for degree: 18 Estimated size: 129 MB
+Trial Time:          0.03999
+Trial Time:          0.02969
+Trial Time:          0.02698
+Trial Time:          0.02685
+Trial Time:          0.02680
+Trial Time:          0.02691
+Trial Time:          0.02666
+Trial Time:          0.02782
+Trial Time:          0.02685
+Trial Time:          0.02696
+Trial Time:          0.02712
+Trial Time:          0.02686
+Trial Time:          0.02677
+Trial Time:          0.02724
+Trial Time:          0.02663
+Trial Time:          0.02711
+Trial Time:          0.02736
+Trial Time:          0.02687
+Trial Time:          0.02785
+Trial Time:          0.02710
+Trial Time:          0.02714
+Trial Time:          0.02624
+Trial Time:          0.02629
+Trial Time:          0.02647
+Trial Time:          0.02809
+Trial Time:          0.02657
+Trial Time:          0.02638
+Trial Time:          0.02694
+Trial Time:          0.02716
+Trial Time:          0.02688
+Trial Time:          0.02679
+Trial Time:          0.02645
+Trial Time:          0.02669
+Trial Time:          0.02675
+Trial Time:          0.02632
+Trial Time:          0.02632
+Trial Time:          0.02684
+Trial Time:          0.02641
+Trial Time:          0.02727
+Trial Time:          0.02671
+Trial Time:          0.02724
+Trial Time:          0.02743
+Trial Time:          0.02767
+Trial Time:          0.02819
+Trial Time:          0.02757
+Trial Time:          0.02621
+Trial Time:          0.02706
+Trial Time:          0.02685
+Trial Time:          0.02679
+Trial Time:          0.02683
+Trial Time:          0.02713
+Trial Time:          0.02850
+Trial Time:          0.02692
+Trial Time:          0.02670
+Trial Time:          0.02647
+Trial Time:          0.02737
+Trial Time:          0.02714
+Trial Time:          0.02722
+Trial Time:          0.02757
+Trial Time:          0.02740
+Trial Time:          0.02703
+Trial Time:          0.02734
+Trial Time:          0.02753
+Trial Time:          0.02687
+Trial Time:          0.02701
+Trial Time:          0.02639
+Trial Time:          0.02757
+Trial Time:          0.02729
+Trial Time:          0.02727
+Trial Time:          0.02729
+Trial Time:          0.02723
+Trial Time:          0.02779
+Trial Time:          0.02696
+Trial Time:          0.02674
+Trial Time:          0.02638
+Trial Time:          0.02675
+Trial Time:          0.02675
+Trial Time:          0.02638
+Trial Time:          0.02693
+Trial Time:          0.02669
+Trial Time:          0.02701
+Trial Time:          0.02786
+Trial Time:          0.02753
+Trial Time:          0.02707
+Trial Time:          0.02702
+Trial Time:          0.02647
+Trial Time:          0.02655
+Trial Time:          0.02680
+Trial Time:          0.02686
+Trial Time:          0.02760
+Trial Time:          0.02646
+Trial Time:          0.02691
+Trial Time:          0.02694
+Trial Time:          0.02698
+Trial Time:          0.02731
+Trial Time:          0.02670
+Trial Time:          0.02713
+Trial Time:          0.02644
+Trial Time:          0.02692
+Trial Time:          0.02711
+Average Time:        0.02715
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_11.sg -n 100
+output is: 
+Read Time:           3.09565
+Graph has 1632803 nodes and 30622564 directed edges for degree: 18 Estimated size: 129 MB
+Trial Time:          0.03470
+Trial Time:          0.02952
+Trial Time:          0.02175
+Trial Time:          0.02157
+Trial Time:          0.02164
+Trial Time:          0.02194
+Trial Time:          0.02146
+Trial Time:          0.02332
+Trial Time:          0.02182
+Trial Time:          0.02293
+Trial Time:          0.02207
+Trial Time:          0.02247
+Trial Time:          0.02183
+Trial Time:          0.02144
+Trial Time:          0.02204
+Trial Time:          0.02288
+Trial Time:          0.02333
+Trial Time:          0.02275
+Trial Time:          0.02204
+Trial Time:          0.02279
+Trial Time:          0.02180
+Trial Time:          0.02193
+Trial Time:          0.02200
+Trial Time:          0.02193
+Trial Time:          0.02255
+Trial Time:          0.02272
+Trial Time:          0.02164
+Trial Time:          0.02188
+Trial Time:          0.02242
+Trial Time:          0.02242
+Trial Time:          0.02299
+Trial Time:          0.02243
+Trial Time:          0.02208
+Trial Time:          0.02229
+Trial Time:          0.02205
+Trial Time:          0.02230
+Trial Time:          0.02234
+Trial Time:          0.02355
+Trial Time:          0.02267
+Trial Time:          0.02131
+Trial Time:          0.02202
+Trial Time:          0.02262
+Trial Time:          0.02180
+Trial Time:          0.02137
+Trial Time:          0.02188
+Trial Time:          0.02212
+Trial Time:          0.02277
+Trial Time:          0.02157
+Trial Time:          0.02226
+Trial Time:          0.02222
+Trial Time:          0.02242
+Trial Time:          0.02224
+Trial Time:          0.02171
+Trial Time:          0.02124
+Trial Time:          0.02263
+Trial Time:          0.02250
+Trial Time:          0.02181
+Trial Time:          0.02253
+Trial Time:          0.02289
+Trial Time:          0.02336
+Trial Time:          0.02218
+Trial Time:          0.02265
+Trial Time:          0.02211
+Trial Time:          0.02176
+Trial Time:          0.02228
+Trial Time:          0.02230
+Trial Time:          0.02196
+Trial Time:          0.02337
+Trial Time:          0.02293
+Trial Time:          0.02275
+Trial Time:          0.02305
+Trial Time:          0.02311
+Trial Time:          0.02319
+Trial Time:          0.02229
+Trial Time:          0.02229
+Trial Time:          0.02280
+Trial Time:          0.02226
+Trial Time:          0.02215
+Trial Time:          0.02183
+Trial Time:          0.02268
+Trial Time:          0.02245
+Trial Time:          0.02248
+Trial Time:          0.02190
+Trial Time:          0.02256
+Trial Time:          0.02222
+Trial Time:          0.02202
+Trial Time:          0.02211
+Trial Time:          0.02237
+Trial Time:          0.02195
+Trial Time:          0.02262
+Trial Time:          0.02271
+Trial Time:          0.02265
+Trial Time:          0.02151
+Trial Time:          0.02279
+Trial Time:          0.02247
+Trial Time:          0.02258
+Trial Time:          0.02227
+Trial Time:          0.02250
+Trial Time:          0.02161
+Trial Time:          0.02219
+Average Time:        0.02249
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_0.sg -n 100
+output is: 
+Read Time:           21.43518
+Graph has 3072441 nodes and 234370166 directed edges for degree: 76 Estimated size: 917 MB
+Trial Time:          0.15197
+Trial Time:          0.14051
+Trial Time:          0.14312
+Trial Time:          0.14116
+Trial Time:          0.14194
+Trial Time:          0.14121
+Trial Time:          0.14169
+Trial Time:          0.14164
+Trial Time:          0.14228
+Trial Time:          0.14727
+Trial Time:          0.14342
+Trial Time:          0.15436
+Trial Time:          0.14541
+Trial Time:          0.15871
+Trial Time:          0.15895
+Trial Time:          0.14967
+Trial Time:          0.14072
+Trial Time:          0.14082
+Trial Time:          0.13933
+Trial Time:          0.13989
+Trial Time:          0.14082
+Trial Time:          0.14006
+Trial Time:          0.14076
+Trial Time:          0.14105
+Trial Time:          0.13856
+Trial Time:          0.13861
+Trial Time:          0.14017
+Trial Time:          0.13944
+Trial Time:          0.13934
+Trial Time:          0.14016
+Trial Time:          0.14298
+Trial Time:          0.14883
+Trial Time:          0.14693
+Trial Time:          0.14981
+Trial Time:          0.14738
+Trial Time:          0.14735
+Trial Time:          0.14725
+Trial Time:          0.14057
+Trial Time:          0.13855
+Trial Time:          0.13962
+Trial Time:          0.13939
+Trial Time:          0.13994
+Trial Time:          0.14012
+Trial Time:          0.13913
+Trial Time:          0.13939
+Trial Time:          0.14020
+Trial Time:          0.14029
+Trial Time:          0.13997
+Trial Time:          0.14025
+Trial Time:          0.13953
+Trial Time:          0.13855
+Trial Time:          0.13901
+Trial Time:          0.14088
+Trial Time:          0.13902
+Trial Time:          0.14144
+Trial Time:          0.14063
+Trial Time:          0.13982
+Trial Time:          0.13992
+Trial Time:          0.13957
+Trial Time:          0.13952
+Trial Time:          0.13975
+Trial Time:          0.13920
+Trial Time:          0.14016
+Trial Time:          0.14073
+Trial Time:          0.14048
+Trial Time:          0.13960
+Trial Time:          0.14050
+Trial Time:          0.13925
+Trial Time:          0.14033
+Trial Time:          0.14003
+Trial Time:          0.14119
+Trial Time:          0.14020
+Trial Time:          0.13939
+Trial Time:          0.14231
+Trial Time:          0.14116
+Trial Time:          0.14608
+Trial Time:          0.13926
+Trial Time:          0.14480
+Trial Time:          0.14173
+Trial Time:          0.14091
+Trial Time:          0.14055
+Trial Time:          0.13937
+Trial Time:          0.13875
+Trial Time:          0.14511
+Trial Time:          0.13997
+Trial Time:          0.13933
+Trial Time:          0.13904
+Trial Time:          0.14116
+Trial Time:          0.13841
+Trial Time:          0.14563
+Trial Time:          0.14112
+Trial Time:          0.13928
+Trial Time:          0.13862
+Trial Time:          0.13958
+Trial Time:          0.14134
+Trial Time:          0.14045
+Trial Time:          0.14609
+Trial Time:          0.14032
+Trial Time:          0.14034
+Trial Time:          0.13974
+Average Time:        0.14180
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_5.sg -n 100
+output is: 
+Read Time:           29.09696
+Graph has 3072441 nodes and 234370166 directed edges for degree: 76 Estimated size: 917 MB
+Trial Time:          0.11283
+Trial Time:          0.10017
+Trial Time:          0.10082
+Trial Time:          0.10201
+Trial Time:          0.09759
+Trial Time:          0.10066
+Trial Time:          0.10479
+Trial Time:          0.09987
+Trial Time:          0.10117
+Trial Time:          0.10111
+Trial Time:          0.10152
+Trial Time:          0.10160
+Trial Time:          0.10046
+Trial Time:          0.10194
+Trial Time:          0.10252
+Trial Time:          0.10808
+Trial Time:          0.10277
+Trial Time:          0.10864
+Trial Time:          0.09997
+Trial Time:          0.09927
+Trial Time:          0.09935
+Trial Time:          0.10179
+Trial Time:          0.09966
+Trial Time:          0.09929
+Trial Time:          0.09964
+Trial Time:          0.10116
+Trial Time:          0.09938
+Trial Time:          0.10923
+Trial Time:          0.11436
+Trial Time:          0.11211
+Trial Time:          0.09742
+Trial Time:          0.09139
+Trial Time:          0.09845
+Trial Time:          0.09721
+Trial Time:          0.09609
+Trial Time:          0.09693
+Trial Time:          0.09773
+Trial Time:          0.09744
+Trial Time:          0.09709
+Trial Time:          0.09618
+Trial Time:          0.09511
+Trial Time:          0.09698
+Trial Time:          0.09682
+Trial Time:          0.09678
+Trial Time:          0.09531
+Trial Time:          0.09629
+Trial Time:          0.09492
+Trial Time:          0.09755
+Trial Time:          0.09464
+Trial Time:          0.10055
+Trial Time:          0.09896
+Trial Time:          0.09271
+Trial Time:          0.09723
+Trial Time:          0.09774
+Trial Time:          0.10181
+Trial Time:          0.09945
+Trial Time:          0.10141
+Trial Time:          0.10177
+Trial Time:          0.10278
+Trial Time:          0.10661
+Trial Time:          0.10155
+Trial Time:          0.09263
+Trial Time:          0.09788
+Trial Time:          0.09472
+Trial Time:          0.09597
+Trial Time:          0.09879
+Trial Time:          0.09940
+Trial Time:          0.09986
+Trial Time:          0.09901
+Trial Time:          0.10127
+Trial Time:          0.10193
+Trial Time:          0.09986
+Trial Time:          0.09580
+Trial Time:          0.10248
+Trial Time:          0.09669
+Trial Time:          0.10278
+Trial Time:          0.09529
+Trial Time:          0.09542
+Trial Time:          0.09507
+Trial Time:          0.09542
+Trial Time:          0.10243
+Trial Time:          0.09788
+Trial Time:          0.09698
+Trial Time:          0.09753
+Trial Time:          0.09764
+Trial Time:          0.09665
+Trial Time:          0.09631
+Trial Time:          0.09569
+Trial Time:          0.09593
+Trial Time:          0.09688
+Trial Time:          0.09683
+Trial Time:          0.09548
+Trial Time:          0.09629
+Trial Time:          0.09647
+Trial Time:          0.09734
+Trial Time:          0.09758
+Trial Time:          0.09121
+Trial Time:          0.09686
+Trial Time:          0.09223
+Trial Time:          0.09599
+Average Time:        0.09907
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_8.sg -n 100
+output is: 
+Read Time:           21.26585
+Graph has 3072441 nodes and 234370166 directed edges for degree: 76 Estimated size: 917 MB
+Trial Time:          0.09847
+Trial Time:          0.08112
+Trial Time:          0.07969
+Trial Time:          0.08128
+Trial Time:          0.08582
+Trial Time:          0.08001
+Trial Time:          0.08465
+Trial Time:          0.08252
+Trial Time:          0.08254
+Trial Time:          0.08208
+Trial Time:          0.08132
+Trial Time:          0.08174
+Trial Time:          0.08467
+Trial Time:          0.08212
+Trial Time:          0.08222
+Trial Time:          0.08520
+Trial Time:          0.08828
+Trial Time:          0.08572
+Trial Time:          0.08212
+Trial Time:          0.08157
+Trial Time:          0.08189
+Trial Time:          0.08470
+Trial Time:          0.08295
+Trial Time:          0.08091
+Trial Time:          0.08221
+Trial Time:          0.08149
+Trial Time:          0.08324
+Trial Time:          0.08155
+Trial Time:          0.08272
+Trial Time:          0.08767
+Trial Time:          0.09079
+Trial Time:          0.12450
+Trial Time:          0.08767
+Trial Time:          0.09196
+Trial Time:          0.08569
+Trial Time:          0.08556
+Trial Time:          0.08566
+Trial Time:          0.08049
+Trial Time:          0.07946
+Trial Time:          0.08072
+Trial Time:          0.08045
+Trial Time:          0.08003
+Trial Time:          0.08393
+Trial Time:          0.08307
+Trial Time:          0.08594
+Trial Time:          0.08198
+Trial Time:          0.08027
+Trial Time:          0.08484
+Trial Time:          0.09199
+Trial Time:          0.08203
+Trial Time:          0.08081
+Trial Time:          0.09227
+Trial Time:          0.08135
+Trial Time:          0.08503
+Trial Time:          0.08583
+Trial Time:          0.08858
+Trial Time:          0.08668
+Trial Time:          0.08016
+Trial Time:          0.08118
+Trial Time:          0.08145
+Trial Time:          0.08230
+Trial Time:          0.08341
+Trial Time:          0.08058
+Trial Time:          0.08110
+Trial Time:          0.08041
+Trial Time:          0.08084
+Trial Time:          0.08315
+Trial Time:          0.08083
+Trial Time:          0.08096
+Trial Time:          0.08182
+Trial Time:          0.08089
+Trial Time:          0.08096
+Trial Time:          0.08086
+Trial Time:          0.08148
+Trial Time:          0.08263
+Trial Time:          0.08157
+Trial Time:          0.08056
+Trial Time:          0.08152
+Trial Time:          0.08246
+Trial Time:          0.08138
+Trial Time:          0.08098
+Trial Time:          0.08185
+Trial Time:          0.08129
+Trial Time:          0.08073
+Trial Time:          0.08093
+Trial Time:          0.08122
+Trial Time:          0.08067
+Trial Time:          0.08239
+Trial Time:          0.08161
+Trial Time:          0.08025
+Trial Time:          0.08166
+Trial Time:          0.08100
+Trial Time:          0.08077
+Trial Time:          0.08086
+Trial Time:          0.08102
+Trial Time:          0.08084
+Trial Time:          0.08839
+Trial Time:          0.08182
+Trial Time:          0.08894
+Trial Time:          0.08048
+Average Time:        0.08340
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_9.sg -n 100
+output is: 
+Read Time:           33.51419
+Graph has 3072441 nodes and 234370166 directed edges for degree: 76 Estimated size: 917 MB
+Trial Time:          0.08794
+Trial Time:          0.07245
+Trial Time:          0.07226
+Trial Time:          0.07390
+Trial Time:          0.07469
+Trial Time:          0.07185
+Trial Time:          0.07669
+Trial Time:          0.07148
+Trial Time:          0.07394
+Trial Time:          0.07389
+Trial Time:          0.07175
+Trial Time:          0.07379
+Trial Time:          0.07321
+Trial Time:          0.07249
+Trial Time:          0.07229
+Trial Time:          0.07393
+Trial Time:          0.07570
+Trial Time:          0.07578
+Trial Time:          0.07539
+Trial Time:          0.07589
+Trial Time:          0.07665
+Trial Time:          0.07727
+Trial Time:          0.07564
+Trial Time:          0.07649
+Trial Time:          0.07875
+Trial Time:          0.07838
+Trial Time:          0.08446
+Trial Time:          0.07897
+Trial Time:          0.07466
+Trial Time:          0.07265
+Trial Time:          0.07412
+Trial Time:          0.07530
+Trial Time:          0.07751
+Trial Time:          0.07513
+Trial Time:          0.07442
+Trial Time:          0.07728
+Trial Time:          0.07787
+Trial Time:          0.07732
+Trial Time:          0.07665
+Trial Time:          0.07595
+Trial Time:          0.07685
+Trial Time:          0.07747
+Trial Time:          0.07767
+Trial Time:          0.08124
+Trial Time:          0.07684
+Trial Time:          0.07398
+Trial Time:          0.07263
+Trial Time:          0.07336
+Trial Time:          0.07882
+Trial Time:          0.07688
+Trial Time:          0.07420
+Trial Time:          0.07408
+Trial Time:          0.07421
+Trial Time:          0.07512
+Trial Time:          0.07215
+Trial Time:          0.07634
+Trial Time:          0.07435
+Trial Time:          0.07405
+Trial Time:          0.07365
+Trial Time:          0.07465
+Trial Time:          0.07253
+Trial Time:          0.07353
+Trial Time:          0.07359
+Trial Time:          0.07329
+Trial Time:          0.07362
+Trial Time:          0.07216
+Trial Time:          0.07557
+Trial Time:          0.07467
+Trial Time:          0.07675
+Trial Time:          0.07395
+Trial Time:          0.07033
+Trial Time:          0.07421
+Trial Time:          0.07558
+Trial Time:          0.07324
+Trial Time:          0.07678
+Trial Time:          0.07365
+Trial Time:          0.07094
+Trial Time:          0.07496
+Trial Time:          0.07419
+Trial Time:          0.07321
+Trial Time:          0.07312
+Trial Time:          0.07448
+Trial Time:          0.07160
+Trial Time:          0.07423
+Trial Time:          0.07619
+Trial Time:          0.07546
+Trial Time:          0.08084
+Trial Time:          0.07957
+Trial Time:          0.07801
+Trial Time:          0.07323
+Trial Time:          0.07915
+Trial Time:          0.07875
+Trial Time:          0.07439
+Trial Time:          0.07882
+Trial Time:          0.07655
+Trial Time:          0.07550
+Trial Time:          0.08128
+Trial Time:          0.07689
+Trial Time:          0.07506
+Trial Time:          0.07250
+Average Time:        0.07536
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_10.sg -n 100
+output is: 
+Read Time:           24.08132
+Graph has 3072441 nodes and 234370166 directed edges for degree: 76 Estimated size: 917 MB
+Trial Time:          0.12412
+Trial Time:          0.11261
+Trial Time:          0.11194
+Trial Time:          0.11298
+Trial Time:          0.11220
+Trial Time:          0.11095
+Trial Time:          0.11265
+Trial Time:          0.11485
+Trial Time:          0.11152
+Trial Time:          0.11391
+Trial Time:          0.11288
+Trial Time:          0.11696
+Trial Time:          0.11625
+Trial Time:          0.11816
+Trial Time:          0.11860
+Trial Time:          0.12331
+Trial Time:          0.11689
+Trial Time:          0.12177
+Trial Time:          0.11759
+Trial Time:          0.11108
+Trial Time:          0.11137
+Trial Time:          0.11107
+Trial Time:          0.11062
+Trial Time:          0.11164
+Trial Time:          0.11189
+Trial Time:          0.11106
+Trial Time:          0.11204
+Trial Time:          0.11120
+Trial Time:          0.11107
+Trial Time:          0.11075
+Trial Time:          0.11259
+Trial Time:          0.10512
+Trial Time:          0.11137
+Trial Time:          0.11051
+Trial Time:          0.10996
+Trial Time:          0.11098
+Trial Time:          0.11360
+Trial Time:          0.11275
+Trial Time:          0.11451
+Trial Time:          0.11389
+Trial Time:          0.11859
+Trial Time:          0.11381
+Trial Time:          0.11830
+Trial Time:          0.11795
+Trial Time:          0.11790
+Trial Time:          0.11624
+Trial Time:          0.11113
+Trial Time:          0.11248
+Trial Time:          0.10618
+Trial Time:          0.11141
+Trial Time:          0.11062
+Trial Time:          0.10521
+Trial Time:          0.11410
+Trial Time:          0.11223
+Trial Time:          0.11280
+Trial Time:          0.11257
+Trial Time:          0.11043
+Trial Time:          0.11261
+Trial Time:          0.10972
+Trial Time:          0.10976
+Trial Time:          0.11177
+Trial Time:          0.11041
+Trial Time:          0.11202
+Trial Time:          0.11039
+Trial Time:          0.11129
+Trial Time:          0.11304
+Trial Time:          0.10997
+Trial Time:          0.11232
+Trial Time:          0.11211
+Trial Time:          0.11068
+Trial Time:          0.11179
+Trial Time:          0.11138
+Trial Time:          0.11047
+Trial Time:          0.11103
+Trial Time:          0.11363
+Trial Time:          0.11227
+Trial Time:          0.11166
+Trial Time:          0.11228
+Trial Time:          0.11347
+Trial Time:          0.11172
+Trial Time:          0.11020
+Trial Time:          0.11345
+Trial Time:          0.11277
+Trial Time:          0.11134
+Trial Time:          0.11187
+Trial Time:          0.11347
+Trial Time:          0.11495
+Trial Time:          0.11789
+Trial Time:          0.11718
+Trial Time:          0.11632
+Trial Time:          0.11775
+Trial Time:          0.11625
+Trial Time:          0.11619
+Trial Time:          0.11683
+Trial Time:          0.11601
+Trial Time:          0.11697
+Trial Time:          0.10483
+Trial Time:          0.11389
+Trial Time:          0.10688
+Trial Time:          0.11129
+Average Time:        0.11303
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_11.sg -n 100
+output is: 
+Read Time:           25.18444
+Graph has 3072441 nodes and 234370166 directed edges for degree: 76 Estimated size: 917 MB
+Trial Time:          0.09269
+Trial Time:          0.07900
+Trial Time:          0.08107
+Trial Time:          0.08195
+Trial Time:          0.08501
+Trial Time:          0.07940
+Trial Time:          0.08140
+Trial Time:          0.08099
+Trial Time:          0.08121
+Trial Time:          0.08175
+Trial Time:          0.08106
+Trial Time:          0.08382
+Trial Time:          0.08029
+Trial Time:          0.08193
+Trial Time:          0.08284
+Trial Time:          0.08346
+Trial Time:          0.08718
+Trial Time:          0.08706
+Trial Time:          0.08097
+Trial Time:          0.08045
+Trial Time:          0.08122
+Trial Time:          0.08190
+Trial Time:          0.08139
+Trial Time:          0.07878
+Trial Time:          0.08140
+Trial Time:          0.08110
+Trial Time:          0.08513
+Trial Time:          0.08101
+Trial Time:          0.08170
+Trial Time:          0.09013
+Trial Time:          0.08818
+Trial Time:          0.10011
+Trial Time:          0.08792
+Trial Time:          0.08872
+Trial Time:          0.08468
+Trial Time:          0.08445
+Trial Time:          0.08514
+Trial Time:          0.08453
+Trial Time:          0.08027
+Trial Time:          0.07958
+Trial Time:          0.07993
+Trial Time:          0.08080
+Trial Time:          0.08226
+Trial Time:          0.08359
+Trial Time:          0.08160
+Trial Time:          0.08667
+Trial Time:          0.08243
+Trial Time:          0.08237
+Trial Time:          0.09818
+Trial Time:          0.08354
+Trial Time:          0.08557
+Trial Time:          0.08910
+Trial Time:          0.08105
+Trial Time:          0.08028
+Trial Time:          0.07934
+Trial Time:          0.08333
+Trial Time:          0.08412
+Trial Time:          0.08451
+Trial Time:          0.08208
+Trial Time:          0.08503
+Trial Time:          0.08151
+Trial Time:          0.08059
+Trial Time:          0.07936
+Trial Time:          0.08100
+Trial Time:          0.08767
+Trial Time:          0.08266
+Trial Time:          0.08748
+Trial Time:          0.08748
+Trial Time:          0.08674
+Trial Time:          0.08409
+Trial Time:          0.08323
+Trial Time:          0.08338
+Trial Time:          0.08571
+Trial Time:          0.08014
+Trial Time:          0.08362
+Trial Time:          0.08445
+Trial Time:          0.07986
+Trial Time:          0.07981
+Trial Time:          0.08354
+Trial Time:          0.08260
+Trial Time:          0.08139
+Trial Time:          0.08216
+Trial Time:          0.08036
+Trial Time:          0.08321
+Trial Time:          0.08458
+Trial Time:          0.08553
+Trial Time:          0.08096
+Trial Time:          0.08275
+Trial Time:          0.08479
+Trial Time:          0.08421
+Trial Time:          0.08209
+Trial Time:          0.08185
+Trial Time:          0.08513
+Trial Time:          0.08004
+Trial Time:          0.08056
+Trial Time:          0.08289
+Trial Time:          0.08917
+Trial Time:          0.08431
+Trial Time:          0.08542
+Trial Time:          0.08464
+Average Time:        0.08348
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_0.sg -n 100
+output is: 
+Read Time:           42.05930
+Graph has 13593033 nodes and 437167958 directed edges for degree: 32 Estimated size: 1771 MB
+Trial Time:          0.27219
+Trial Time:          0.25879
+Trial Time:          0.26304
+Trial Time:          0.26357
+Trial Time:          0.26231
+Trial Time:          0.26181
+Trial Time:          0.26307
+Trial Time:          0.26271
+Trial Time:          0.26405
+Trial Time:          0.27424
+Trial Time:          0.27303
+Trial Time:          0.27336
+Trial Time:          0.30126
+Trial Time:          0.29232
+Trial Time:          0.28059
+Trial Time:          0.26240
+Trial Time:          0.25730
+Trial Time:          0.26826
+Trial Time:          0.27200
+Trial Time:          0.27311
+Trial Time:          0.26705
+Trial Time:          0.26566
+Trial Time:          0.27110
+Trial Time:          0.26011
+Trial Time:          0.25841
+Trial Time:          0.26152
+Trial Time:          0.26079
+Trial Time:          0.25924
+Trial Time:          0.25994
+Trial Time:          0.25982
+Trial Time:          0.25968
+Trial Time:          0.25698
+Trial Time:          0.26179
+Trial Time:          0.25862
+Trial Time:          0.26339
+Trial Time:          0.25760
+Trial Time:          0.25823
+Trial Time:          0.26143
+Trial Time:          0.26288
+Trial Time:          0.25834
+Trial Time:          0.25871
+Trial Time:          0.26075
+Trial Time:          0.26283
+Trial Time:          0.25794
+Trial Time:          0.25974
+Trial Time:          0.25846
+Trial Time:          0.26428
+Trial Time:          0.25758
+Trial Time:          0.25753
+Trial Time:          0.26345
+Trial Time:          0.25962
+Trial Time:          0.26229
+Trial Time:          0.26416
+Trial Time:          0.26085
+Trial Time:          0.26639
+Trial Time:          0.26427
+Trial Time:          0.25921
+Trial Time:          0.26660
+Trial Time:          0.26034
+Trial Time:          0.26415
+Trial Time:          0.26279
+Trial Time:          0.25630
+Trial Time:          0.26389
+Trial Time:          0.26036
+Trial Time:          0.26727
+Trial Time:          0.26128
+Trial Time:          0.25749
+Trial Time:          0.26238
+Trial Time:          0.25876
+Trial Time:          0.26386
+Trial Time:          0.26304
+Trial Time:          0.25796
+Trial Time:          0.26415
+Trial Time:          0.26057
+Trial Time:          0.26029
+Trial Time:          0.26217
+Trial Time:          0.26022
+Trial Time:          0.26293
+Trial Time:          0.25809
+Trial Time:          0.25748
+Trial Time:          0.26370
+Trial Time:          0.26155
+Trial Time:          0.26143
+Trial Time:          0.25955
+Trial Time:          0.26149
+Trial Time:          0.25831
+Trial Time:          0.26094
+Trial Time:          0.25997
+Trial Time:          0.25820
+Trial Time:          0.25585
+Trial Time:          0.25797
+Trial Time:          0.25706
+Trial Time:          0.25988
+Trial Time:          0.26371
+Trial Time:          0.26285
+Trial Time:          0.26352
+Trial Time:          0.26012
+Trial Time:          0.25986
+Trial Time:          0.26038
+Trial Time:          0.25891
+Average Time:        0.26278
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_5.sg -n 100
+output is: 
+Read Time:           39.83026
+Graph has 13593033 nodes and 437167958 directed edges for degree: 32 Estimated size: 1771 MB
+Trial Time:          0.20635
+Trial Time:          0.20023
+Trial Time:          0.19764
+Trial Time:          0.20015
+Trial Time:          0.20079
+Trial Time:          0.19974
+Trial Time:          0.20159
+Trial Time:          0.19855
+Trial Time:          0.19752
+Trial Time:          0.19777
+Trial Time:          0.19830
+Trial Time:          0.19866
+Trial Time:          0.20228
+Trial Time:          0.20755
+Trial Time:          0.21585
+Trial Time:          0.21328
+Trial Time:          0.20825
+Trial Time:          0.19789
+Trial Time:          0.19903
+Trial Time:          0.19832
+Trial Time:          0.19756
+Trial Time:          0.20956
+Trial Time:          0.21191
+Trial Time:          0.20839
+Trial Time:          0.19763
+Trial Time:          0.19783
+Trial Time:          0.20015
+Trial Time:          0.20645
+Trial Time:          0.20644
+Trial Time:          0.20353
+Trial Time:          0.20284
+Trial Time:          0.20675
+Trial Time:          0.20266
+Trial Time:          0.20777
+Trial Time:          0.19924
+Trial Time:          0.20034
+Trial Time:          0.20078
+Trial Time:          0.19654
+Trial Time:          0.20289
+Trial Time:          0.20245
+Trial Time:          0.19943
+Trial Time:          0.20123
+Trial Time:          0.20406
+Trial Time:          0.19819
+Trial Time:          0.19940
+Trial Time:          0.20243
+Trial Time:          0.19684
+Trial Time:          0.19668
+Trial Time:          0.20201
+Trial Time:          0.19688
+Trial Time:          0.19870
+Trial Time:          0.20421
+Trial Time:          0.19619
+Trial Time:          0.19723
+Trial Time:          0.19896
+Trial Time:          0.19677
+Trial Time:          0.20065
+Trial Time:          0.20555
+Trial Time:          0.20104
+Trial Time:          0.20239
+Trial Time:          0.19974
+Trial Time:          0.19893
+Trial Time:          0.20447
+Trial Time:          0.19907
+Trial Time:          0.19817
+Trial Time:          0.20182
+Trial Time:          0.19818
+Trial Time:          0.19679
+Trial Time:          0.20407
+Trial Time:          0.19536
+Trial Time:          0.19609
+Trial Time:          0.20272
+Trial Time:          0.19843
+Trial Time:          0.19967
+Trial Time:          0.20043
+Trial Time:          0.19673
+Trial Time:          0.19535
+Trial Time:          0.20089
+Trial Time:          0.19834
+Trial Time:          0.19715
+Trial Time:          0.20065
+Trial Time:          0.20269
+Trial Time:          0.19863
+Trial Time:          0.19563
+Trial Time:          0.19608
+Trial Time:          0.19839
+Trial Time:          0.19864
+Trial Time:          0.19583
+Trial Time:          0.19705
+Trial Time:          0.20083
+Trial Time:          0.19850
+Trial Time:          0.19837
+Trial Time:          0.19910
+Trial Time:          0.19878
+Trial Time:          0.19622
+Trial Time:          0.20068
+Trial Time:          0.19762
+Trial Time:          0.20019
+Trial Time:          0.19823
+Trial Time:          0.19931
+Average Time:        0.20054
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_8.sg -n 100
+output is: 
+Read Time:           42.08162
+Graph has 13593033 nodes and 437167958 directed edges for degree: 32 Estimated size: 1771 MB
+Trial Time:          0.18232
+Trial Time:          0.17353
+Trial Time:          0.17595
+Trial Time:          0.17281
+Trial Time:          0.17332
+Trial Time:          0.17342
+Trial Time:          0.17539
+Trial Time:          0.17784
+Trial Time:          0.19987
+Trial Time:          0.18311
+Trial Time:          0.18072
+Trial Time:          0.17244
+Trial Time:          0.17393
+Trial Time:          0.17619
+Trial Time:          0.17244
+Trial Time:          0.17479
+Trial Time:          0.18115
+Trial Time:          0.17544
+Trial Time:          0.17999
+Trial Time:          0.18531
+Trial Time:          0.18391
+Trial Time:          0.17316
+Trial Time:          0.17430
+Trial Time:          0.17070
+Trial Time:          0.17254
+Trial Time:          0.17844
+Trial Time:          0.17721
+Trial Time:          0.17435
+Trial Time:          0.17713
+Trial Time:          0.17626
+Trial Time:          0.17028
+Trial Time:          0.17825
+Trial Time:          0.17742
+Trial Time:          0.17320
+Trial Time:          0.17538
+Trial Time:          0.18126
+Trial Time:          0.18432
+Trial Time:          0.18248
+Trial Time:          0.18353
+Trial Time:          0.17961
+Trial Time:          0.18595
+Trial Time:          0.18147
+Trial Time:          0.17620
+Trial Time:          0.17776
+Trial Time:          0.17407
+Trial Time:          0.17279
+Trial Time:          0.17540
+Trial Time:          0.17507
+Trial Time:          0.17022
+Trial Time:          0.17156
+Trial Time:          0.17302
+Trial Time:          0.17593
+Trial Time:          0.17474
+Trial Time:          0.17126
+Trial Time:          0.17821
+Trial Time:          0.17638
+Trial Time:          0.17524
+Trial Time:          0.17751
+Trial Time:          0.17444
+Trial Time:          0.17114
+Trial Time:          0.17883
+Trial Time:          0.17720
+Trial Time:          0.17383
+Trial Time:          0.17253
+Trial Time:          0.17996
+Trial Time:          0.17660
+Trial Time:          0.17314
+Trial Time:          0.17668
+Trial Time:          0.17856
+Trial Time:          0.17262
+Trial Time:          0.17052
+Trial Time:          0.17699
+Trial Time:          0.17562
+Trial Time:          0.17239
+Trial Time:          0.17872
+Trial Time:          0.17254
+Trial Time:          0.17296
+Trial Time:          0.17310
+Trial Time:          0.17980
+Trial Time:          0.17341
+Trial Time:          0.17630
+Trial Time:          0.18177
+Trial Time:          0.18106
+Trial Time:          0.17587
+Trial Time:          0.17861
+Trial Time:          0.17392
+Trial Time:          0.17223
+Trial Time:          0.16930
+Trial Time:          0.17657
+Trial Time:          0.17383
+Trial Time:          0.17475
+Trial Time:          0.18073
+Trial Time:          0.17925
+Trial Time:          0.17825
+Trial Time:          0.17288
+Trial Time:          0.17392
+Trial Time:          0.17220
+Trial Time:          0.17237
+Trial Time:          0.17174
+Trial Time:          0.17325
+Average Time:        0.17627
+
+error is: 
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/sssp: not found
+
+-------------------------------------------------
+CSV file created: sssp.csv
+-------------------------------------------------
+Command [ pr ] is running ...
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/RD/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/RD/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/RD/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/RD/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/RD/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/RD/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr: not found
+
+-------------------------------------------------
+CSV file created: pr.csv
+-------------------------------------------------
+Command [ bc ] is running ...
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bc: not found
+
+-------------------------------------------------
+CSV file created: bc.csv
+-------------------------------------------------
+Command [ spmv ] is running ...
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv: not found
+
+-------------------------------------------------
+CSV file created: spmv.csv
+-------------------------------------------------
+Command [ bfs ] is running ...
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/RD/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/RD/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/RD/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/RD/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/RD/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/RD/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/bfs: not found
+
+-------------------------------------------------
+CSV file created: bfs.csv
+-------------------------------------------------
+Command [ cc ] is running ...
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/RD/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc: not found
+
+-------------------------------------------------
+CSV file created: cc.csv
+-------------------------------------------------
+Command [ cc_sv ] is running ...
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SLJ1/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/RD/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CPAT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/SPKC/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/CORKT/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WIKLE/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/GPLUS/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/WEB01/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_0.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_5.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_8.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_9.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_10.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+OMP_NUM_THREADS=64 /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -f /bigtemp/rgq5aw/graphDatasets/TWTR/graph_11.sg -n 100
+output is: 
+
+error is: 
+/bin/sh: 1: /u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv: not found
+
+-------------------------------------------------
+CSV file created: cc_sv.csv
+-------------------------------------------------
