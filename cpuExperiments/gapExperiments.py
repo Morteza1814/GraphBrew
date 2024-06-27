@@ -7,13 +7,13 @@ max_threads = os.cpu_count()
 
 # Fill out these dictionaries manually
 commands = {
-    'pr': '/u/rgq5aw/GIT/gapbs/pr',
-    'bc': '/u/rgq5aw/GIT/gapbs/bc',
-    'sssp': '/u/rgq5aw/GIT/gapbs/sssp',
-    'spmv': '/u/rgq5aw/GIT/gapbs/pr_spmv',
-    'bfs': '/u/rgq5aw/GIT/gapbs/bfs',
-    'cc': '/u/rgq5aw/GIT/gapbs/cc',
-    'cc_sv': '/u/rgq5aw/GIT/gapbs/cc_sv',
+    'sssp': '/u/rgq5aw/GIT/GraphBrew/bench/bin/sssp',
+    'pr': '/u/rgq5aw/GIT/GraphBrew/bench/bin/pr',
+    'bc': '/u/rgq5aw/GIT/GraphBrew/bench/bin/bc',
+    'spmv': '/u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv',
+    'bfs': '/u/rgq5aw/GIT/GraphBrew/bench/bin/bfs',
+    'cc': '/u/rgq5aw/GIT/GraphBrew/bench/bin/cc',
+    'cc_sv': '/u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv',
 }
 
 directories = {
