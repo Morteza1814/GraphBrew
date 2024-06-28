@@ -6,8 +6,8 @@ import os
 # Fill out these dictionaries manually
 commands = {
     'spmv': '/u/rgq5aw/GIT/gunrock/build/bin/spmv',
-    'pr': '/u/rgq5aw/GIT/gunrock/build/bin/pr',
     'sssp': '/u/rgq5aw/GIT/gunrock/build/bin/sssp',
+    'pr': '/u/rgq5aw/GIT/gunrock/build/bin/pr',
     'bfs': '/u/rgq5aw/GIT/gunrock/build/bin/bfs',
     'bc': '/u/rgq5aw/GIT/gunrock/build/bin/bc'
 }
@@ -40,7 +40,7 @@ def run_command(command):
 
 # Function to parse the elapsed time from the command output
 def parse_time(output):
-    match = re.search(r'GPU Elapsed Time\s*:\s*(\d+\.\d+)\s*\(ms\)', output)
+    match = re.search(r'Average GPU Elapsed Time\s*:\s*(\d+\.\d+)\s*\(ms\)', output)
     if match:
         return float(match.group(1))
     return None
