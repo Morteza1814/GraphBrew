@@ -8,9 +8,8 @@
 #SBATCH --threads-per-core=2
 #SBATCH --mem=400G
 #SBATCH --time=4-00:00:00
-#SBATCH --nodelist=cheetah05 
 #SBATCH --partition=gpu
-#SBATCH --reservation=cmv6ru_96
+#SBATCH --nodelist=cheetah02
 
 module load python3
-python3 -u ../gapExperiments.py
+python3 -u ../gapExperiments.py "/bigtemp/rgq5aw/graphDatasets/" "-n10" 

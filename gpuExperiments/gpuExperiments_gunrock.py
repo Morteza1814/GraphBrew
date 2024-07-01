@@ -30,7 +30,9 @@ file_names = {
     'graph_8': 'graph_8.mtx',
     'graph_9': 'graph_9.mtx',
     'graph_10': 'graph_10.mtx',
-    'graph_11': 'graph_11.mtx'
+    'graph_11': 'graph_11.mtx',
+    'graph_12': 'graph_12.mtx',
+    'graph_13': 'graph_13.mtx'
 }
 
 # Function to run a command and return its output
