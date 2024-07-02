@@ -5,7 +5,7 @@
 #SBATCH --gpus=1
 #SBATCH --constraint=a100_80gb
 #SBATCH --time=4-00:00:00
-#SBATCH --nodelist=cheetah05 
+#SBATCH --nodelist=cheetah01 
 #SBATCH --partition=gpu
 #SBATCH --reservation=cmv6ru_96
 #SBATCH --mem=400GB

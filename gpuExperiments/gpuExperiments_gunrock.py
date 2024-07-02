@@ -2,6 +2,17 @@ import subprocess
 import csv
 import re
 import os
+import sys
+
+
+if len(sys.argv) < 2:
+    print("Usage: python3 gapExperiments.py <graph_dir>")
+    exit(1)
+graph_dir = sys.argv[1]
+# Ensure graph_dir ends with a '/'
+if not graph_dir.endswith('/'):
+    graph_dir += '/'
+print("graph_dir is: ", graph_dir)
 
 # Fill out these dictionaries manually
 commands = {
@@ -13,15 +24,15 @@ commands = {
 }
 
 directories = {
-    'SLJ1': '/bigtemp/rgq5aw/graphDatasets/SLJ1',
-    'RD': '/bigtemp/rgq5aw/graphDatasets/RD',
-    'CPAT': '/bigtemp/rgq5aw/graphDatasets/CPAT',
-    'SPKC': '/bigtemp/rgq5aw/graphDatasets/SPKC',
-    'CORKT': '/bigtemp/rgq5aw/graphDatasets/CORKT',
-    'WIKLE': '/bigtemp/rgq5aw/graphDatasets/WIKLE',
-    'GPLUS': '/bigtemp/rgq5aw/graphDatasets/GPLUS',
-    'WEB01' : '/bigtemp/rgq5aw/graphDatasets/WEB01',
-    'TWTR' : '/bigtemp/rgq5aw/graphDatasets/TWTR',
+    'SLJ1': graph_dir + 'SLJ1',
+    'RD': graph_dir + 'RD',
+    'CPAT': graph_dir + 'CPAT',
+    'SPKC': graph_dir + 'SPKC',
+    'CORKT': graph_dir + 'CORKT',
+    'WIKLE': graph_dir + 'WIKLE',
+    'GPLUS': graph_dir + 'GPLUS',
+    'WEB01' : graph_dir + 'WEB01',
+    'TWTR' : graph_dir + 'TWTR',
 }
 
 file_names = {

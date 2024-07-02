@@ -3,9 +3,11 @@ import re
 import subprocess
 import csv
 
+max_threads = os.cpu_count()
+
 # Define the base directory containing the graph datasets
-BASE_DIR   = "/media/Data/00_GraphDatasets/GBREW"
-BASE_NVME_DIR   = "/media/NVMeData/00_GraphDatasets/GBREW"
+BASE_DIR   = "/bigtemp/rgq5aw/graphDatasets"
+BASE_NVME_DIR   = "/bigtemp/rgq5aw/graphDatasets_5"
 RESULT_DIR = "bench/results"
 LOG_DIR_RUN   = os.path.join(RESULT_DIR, "logs_run")
 LOG_DIR_ORDER = os.path.join(RESULT_DIR, "logs_order")
@@ -128,7 +130,7 @@ def run_reorders():
         if not os.path.isfile(random_graph_file):
             print(f"Running converter with reorder {reorder_name} option: {reorder_option}")
             print(f"Output file: {random_graph_file}")
-            make_command = f"make run-converter GRAPH_BENCH='-f {graph_file} -b {random_graph_file}' RUN_PARAMS='{reorder_option}' FLUSH_CACHE=0 PARALLEL=32"
+            make_command = f"make run-converter GRAPH_BENCH='-f {graph_file} -b {random_graph_file}' RUN_PARAMS='{reorder_option}' FLUSH_CACHE=0 PARALLEL={max_threads}"
             log_file = os.path.join(LOG_DIR_ORDER, f"{graph}_initial.log")
             with open(log_file, 'w') as log:
                 print(f"Executing command: {make_command}")
@@ -304,7 +306,7 @@ def run_convert():
             print(f"Output file: {output_file}")
             
             # Construct and run the make command
-            make_command = f"make run-converter GRAPH_BENCH='-f {output_file} -b {output_file_conv} -p {output_file_conv}' RUN_PARAMS='-o5' FLUSH_CACHE=0 PARALLEL=32"
+            make_command = f"make run-converter GRAPH_BENCH='-f {output_file} -b {output_file_conv} -p {output_file_conv}' RUN_PARAMS='-o5' FLUSH_CACHE=0 PARALLEL={max_threads}"
             log_file = os.path.join(LOG_DIR_ORDER, f"{graph}_{reorder_name}.log")
             with open(log_file, 'w') as log:
                 print(f"Executing command: {make_command}")
