@@ -25,36 +25,38 @@ commands = {
     'bfs': '/u/rgq5aw/GIT/GraphBrew/bench/bin/bfs',
     'cc': '/u/rgq5aw/GIT/GraphBrew/bench/bin/cc',
     'cc_sv': '/u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv',
-    'sssp_o5': '/u/rgq5aw/GIT/GraphBrew/bench/bin/sssp -o5',
-    'pr_o5': '/u/rgq5aw/GIT/GraphBrew/bench/bin/pr -i100 -o5',
-    'bc_o5': '/u/rgq5aw/GIT/GraphBrew/bench/bin/bc -o5',
-    'spmv_o5': '/u/rgq5aw/GIT/GraphBrew/bench/bin/pr_spmv -i100 -o5',
-    'bfs_o5': '/u/rgq5aw/GIT/GraphBrew/bench/bin/bfs -o5',
-    'cc_o5': '/u/rgq5aw/GIT/GraphBrew/bench/bin/cc -o5',
-    'cc_sv_o5': '/u/rgq5aw/GIT/GraphBrew/bench/bin/cc_sv -o5',
 }
 
 directories = {
-    'SLJ1': graph_dir + 'SLJ1',
     'RD': graph_dir + 'RD',
+    'SLJ1': graph_dir + 'SLJ1',
     'CPAT': graph_dir + 'CPAT',
     'SPKC': graph_dir + 'SPKC',
     'CORKT': graph_dir + 'CORKT',
-    'WIKLE': graph_dir + 'WIKLE',
-    'GPLUS': graph_dir + 'GPLUS',
-    'WEB01' : graph_dir + 'WEB01',
-    'TWTR' : graph_dir + 'TWTR',
+    # 'WIKLE': graph_dir + 'WIKLE',
+    # 'GPLUS': graph_dir + 'GPLUS',
+    # 'WEB01' : graph_dir + 'WEB01',
+    # 'TWTR' : graph_dir + 'TWTR',
 }
 
 file_names = {
-    'graph_0': 'graph_0.sg',
-    'graph_5': 'graph_5.sg',
-    'graph_8': 'graph_8.sg',
-    'graph_9': 'graph_9.sg',
-    'graph_10': 'graph_10.sg',
-    'graph_11': 'graph_11.sg',
-    'graph_12': 'graph_12.sg',
-    'graph_13': 'graph_13.sg'
+    # 'graph_0': 'graph_0.sg',
+    # 'graph_5': 'graph_5.sg',
+    # 'graph_8': 'graph_8.sg',
+    # 'graph_9': 'graph_9.sg',
+    # 'graph_10': 'graph_10.sg',
+    # 'graph_11': 'graph_11.sg',
+    # 'graph_12': 'graph_12.sg',
+    # 'graph_13': 'graph_13.sg'
+    'graph_13:10:1': 'graph_13:10:1.sg',
+    'graph_13:10:5': 'graph_13:10:5.sg',
+    'graph_13:10:6': 'graph_13:10:6.sg',
+    'graph_13:10:7': 'graph_13:10:7.sg',
+    'graph_13:10:8': 'graph_13:10:8.sg',
+    'graph_13:10:9': 'graph_13:10:9.sg',
+    'graph_13:10:10': 'graph_13:10:10.sg',
+    'graph_13:10:11': 'graph_13:10:11.sg',
+    'graph_13:10:12': 'graph_13:10:12.sg',
 }
 
 # Function to run a command and return its output
