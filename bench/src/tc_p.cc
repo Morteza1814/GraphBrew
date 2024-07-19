@@ -72,26 +72,49 @@ size_t OrderedCount(const Graph &g)
     return total;
 }
 
+size_t LocalOrderedCount(const Graph &g)
+{
+    size_t total = 0;
+    #pragma omp parallel for reduction(+ : total) schedule(dynamic, 64)
+    for (NodeID u = 0; u < g.num_nodes(); u++)
+    {
+        vector<NodeID> intersection;
+        for (NodeID v : g.out_neigh(u))
+        {
+            // if (v > u)
+            //     break;
+            intersection.clear();
+            intersection.resize(min(g.out_degree(u), g.out_degree(v)));
+            auto new_end = set_intersection(
+                               g.out_neigh(u).begin(), g.out_neigh(u).end(),
+                               g.out_neigh(v).begin(), g.out_neigh(v).end(),
+                               intersection.begin());
+            intersection.resize(new_end - intersection.begin());
+            total += intersection.size();
+        }
+    }
+    return total;
+}
+
 size_t CrossOrderedCount(const Graph &g, const Graph &g2)
 {
     size_t total = 0;
     #pragma omp parallel for reduction(+ : total) schedule(dynamic, 64)
     for (NodeID u = 0; u < g.num_nodes(); u++)
     {
+        vector<NodeID> intersection;
         for (NodeID v : g.out_neigh(u))
         {
-            if (v > u)
-                break;
-            auto it = g2.out_neigh(v).begin();
-            for (NodeID w : g.out_neigh(u))
-            {
-                if (w > v)
-                    break;
-                while (*it < w)
-                    it++;
-                if (w == *it)
-                    total++;
-            }
+            // if (v > u)
+            //     break;
+            intersection.clear();
+            intersection.resize(min(g.out_degree(u), g2.out_degree(v)));
+            auto new_end = set_intersection(
+                               g.out_neigh(u).begin(), g.out_neigh(u).end(),
+                               g2.out_neigh(v).begin(), g2.out_neigh(v).end(),
+                               intersection.begin());
+            intersection.resize(new_end - intersection.begin());
+            total += intersection.size();
         }
     }
     return total;
@@ -181,8 +204,11 @@ int main(int argc, char *argv[])
     CLApp cli(argc, argv, "triangle count");
     if (!cli.ParseArgs())
         return -1;
+
     Builder b(cli);
     Graph g = b.MakeGraph();
+
+    cli.set_keep_self(true);
     // if (g.directed()) {
     //   cout << "Input graph is directed but tc requires undirected" << endl;
     //   return -2;
@@ -214,16 +240,19 @@ int main(int argc, char *argv[])
     size_t p_total = 0;
 
     // local count
-    for (int col = 0; col < p_m; ++col)
+    for (int row = 0; row < p_n; ++row)
     {
-        for (int row = 0; row < p_n; ++row)
+        for (int col = 0; col < p_m; ++col)
         {
             int idx = row * p_m + col;
             std::cout << "Local TC_P: [" << row << "] [" << col << "]" << std::endl;
-            // p_g[idx].PrintTopology();
+            // if(cli.logging_en())
+            // {
+            p_g[idx].PrintTopology();
+            // }
             p_g[idx].PrintStats();
             tm.Start();
-            p_total = OrderedCount(p_g[idx]);
+            p_total = LocalOrderedCount(p_g[idx]);
             tm.Stop();
             tc_p_time += tm.Seconds();
             total += p_total;
@@ -241,10 +270,30 @@ int main(int argc, char *argv[])
             for (int row2 = row1 + 1; row2 < p_n; ++row2)
             {
                 int idx2 = row2 * p_m + col;
-                std::cout << "Cross TC_P: [" << row1 << "] [" << col << "] with ["
-                          << row2 << "] [" << col << "]" << std::endl;
+                std::cout << "Cross TC_P: [" << row1 << "] [" << col << "] " << std::to_string(p_g[idx1].num_edges_directed()) << " with ["
+                          << row2 << "] [" << col << "] " << std::to_string(p_g[idx2].num_edges_directed()) << std::endl;
                 tm.Start();
-                p_total = CrossOrderedCount(p_g[idx1], p_g[idx2]);
+                // p_total = CrossOrderedCount(p_g[idx1], p_g[idx2]);
+                tm.Stop();
+                tc_p_time += tm.Seconds();
+                total += p_total;
+            }
+        }
+    }
+
+    // Cross count for each row
+    for (int row = 0; row < p_n; ++row)
+    {
+        for (int col1 = 0; col1 < p_m; ++col1)
+        {
+            int idx1 = row * p_m + col1;
+            for (int col2 = col1 + 1; col2 < p_m; ++col2)
+            {
+                int idx2 = row * p_m + col2;
+                std::cout << "Cross TC_P: [" << row << "] [" << col1 << "] " << std::to_string(p_g[idx1].num_edges_directed()) << " with ["
+                          << row << "] [" << col2 << "] " << std::to_string(p_g[idx2].num_edges_directed()) << std::endl;
+                tm.Start();
+                // p_total = CrossOrderedCount(p_g[idx1], p_g[idx2]);
                 tm.Stop();
                 tc_p_time += tm.Seconds();
                 total += p_total;

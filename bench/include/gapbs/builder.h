@@ -11,6 +11,7 @@
 #include <functional>
 #include <numeric>
 #include <parallel/algorithm>
+#include <parallel/numeric>
 #include <set>
 #include <tuple>
 #include <type_traits>
@@ -130,6 +131,20 @@ class BuilderBase
     int64_t num_nodes_ = -1;
     std::vector<std::pair<ReorderingAlgo, std::string>> reorder_options_;
 
+
+    //TRUST Partitions
+    int64_t trust_vertex_count, trust_edge_count;
+    NodeID_ trust_endofprocess = -1;
+    struct trust_edge_list
+    {
+        NodeID_ vertexID;
+        vector<NodeID_> edge;
+        NodeID_ newid;
+    };
+
+    vector<trust_edge_list> trust_vertex;
+    vector<trust_edge_list> trust_vertexb;
+
 public:
     explicit BuilderBase(const CLBase &cli) : cli_(cli)
     {
@@ -167,6 +182,19 @@ public:
             max_seen = __gnu_parallel::max(max_seen, (NodeID_)e.v);
         }
         return max_seen;
+    }
+
+    NodeID_ FindMinNodeID(const EdgeList &el)
+    {
+        NodeID_ min_seen = FindMaxNodeID(el);
+        #pragma omp parallel for reduction(min : min_seen)
+        for (auto it = el.begin(); it < el.end(); it++)
+        {
+            Edge e = *it;
+            min_seen = __gnu_parallel::min(min_seen, e.u);
+            min_seen = __gnu_parallel::min(min_seen, (NodeID_)e.v);
+        }
+        return min_seen;
     }
 
     pvector<NodeID_> CountDegrees(const EdgeList &el, bool transpose)
@@ -257,7 +285,8 @@ public:
             }
             __gnu_parallel::stable_sort(n_start, n_end);
             DestID_ *new_end = std::unique(n_start, n_end);
-            new_end = std::remove(n_start, new_end, n);
+            if(!cli_.keep_self())
+                new_end = std::remove(n_start, new_end, n);
             diffs[n] = new_end - n_start;
         }
         pvector<SGOffset> sq_offsets = ParallelPrefixSum(diffs);
@@ -477,9 +506,9 @@ public:
                     inv_index, inv_neighs);
     }
 
-    pvector<NodeID_> CountLocalDegrees(const EdgeList &el, bool transpose)
+    pvector<NodeID_> CountLocalDegrees(const EdgeList &el, bool transpose, int64_t num_nodes_local = -1)
     {
-        pvector<NodeID_> degrees(num_nodes_, 0);
+        pvector<NodeID_> degrees(num_nodes_local, 0);
         #pragma omp parallel for
         for (auto it = el.begin(); it < el.end(); it++)
         {
@@ -495,9 +524,10 @@ public:
     void MakeLocalCSR(const EdgeList &el, bool transpose, DestID_ ***index,
                       DestID_ **neighs)
     {
-        pvector<NodeID_> degrees = CountLocalDegrees(el, transpose);
+        int64_t num_nodes_local = FindMaxNodeID(el) + 1;
+        pvector<NodeID_> degrees = CountLocalDegrees(el, transpose, num_nodes_local);
         pvector<SGOffset> offsets = ParallelPrefixSum(degrees);
-        *neighs = new DestID_[offsets[num_nodes_]];
+        *neighs = new DestID_[offsets[num_nodes_local]];
         *index = CSRGraph<NodeID_, DestID_>::GenIndex(offsets, *neighs);
         #pragma omp parallel for
         for (auto it = el.begin(); it < el.end(); it++)
@@ -513,21 +543,22 @@ public:
 
     CSRGraph<NodeID_, DestID_, invert> MakeLocalGraphFromEL(EdgeList &el)
     {
-        DestID_ **index = nullptr, **inv_index = nullptr;
-        DestID_ *neighs = nullptr, *inv_neighs = nullptr;
+        DestID_ **index = nullptr;
+        // **inv_index = nullptr;
+        DestID_ *neighs = nullptr;
+        // *inv_neighs = nullptr;
         Timer t;
         t.Start();
-        if (num_nodes_ == -1)
-        {
-            num_nodes_ = FindMaxNodeID(el) + 1;
-        }
+
+        int64_t num_nodes_local = FindMaxNodeID(el) + 1;
 
         MakeLocalCSR(el, false, &index, &neighs);
-        MakeLocalCSR(el, true, &inv_index, &inv_neighs);
-        CSRGraph<NodeID_, DestID_, invert> g = CSRGraph<NodeID_, DestID_, invert>(
-                num_nodes_, index, neighs, inv_index, inv_neighs);
-        // CSRGraph<NodeID_, DestID_, invert> g = CSRGraph<NodeID_, DestID_,
-        // invert>(num_nodes_, index, neighs); g.PrintTopology();
+        // MakeLocalCSR(el, true, &inv_index, &inv_neighs);
+        // CSRGraph<NodeID_, DestID_, invert> g = CSRGraph<NodeID_, DestID_, invert>(
+        //         num_nodes_, index, neighs, inv_index, inv_neighs);
+        CSRGraph<NodeID_, DestID_, invert> g = CSRGraph<NodeID_, DestID_,
+                                           invert>(num_nodes_local, index, neighs);
+
         g = SquishGraph(g);
         // SquishCSR(g, false, &index, &neighs);
         // SquishCSR(g, true, &inv_index, &inv_neighs);
@@ -584,7 +615,7 @@ public:
     }
 
     EdgeList
-    MakeUniDirectELFromGraph(const CSRGraph<NodeID_, DestID_, invert> &g)
+    MakeUniDirectELFromGraph(const CSRGraph<NodeID_, DestID_, invert> &g, NodeID_ min_seen = 0)
     {
         int64_t num_edges = g.num_edges_directed();
         int64_t num_nodes = g.num_nodes();
@@ -601,18 +632,92 @@ public:
             NodeID_ j = 0;
             for (DestID_ neighbor : g.out_neigh(i))
             {
-                el[out_start + j] = Edge(i, neighbor);
+                if (g.is_weighted())
+                {
+                    NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).v - min_seen;
+                    WeightT_ weight =
+                        static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).w;
+                    el[out_start + j] = Edge(i - min_seen, NodeWeight<NodeID_, WeightT_>(dest, weight));
+                    el[in_start + j] =
+                        Edge(dest, NodeWeight<NodeID_, WeightT_>(i - min_seen, weight));
+                }
+                else
+                {
+                    el[out_start + j] = Edge(i - min_seen, neighbor - min_seen);
+                    el[in_start + j] = Edge(neighbor - min_seen, i - min_seen);
+                }
+
+                ++j;
+            }
+        }
+
+        // PrintEdgeList(el);
+
+        return el;
+    }
+
+    EdgeList MakeTrustDirectELFromGraph(const CSRGraph<NodeID_, DestID_, invert> &g)
+    {
+        int64_t num_edges = g.num_edges_directed();
+        int64_t num_nodes = g.num_nodes();
+        EdgeList el(num_edges);
+
+        std::vector<int> a(num_nodes, 0);
+
+        // Parallelized step to mark vertices that appear in the edge list
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < num_nodes; ++i)
+        {
+            for (DestID_ neighbor : g.out_neigh(i))
+            {
+                #pragma omp atomic write
+                a[i] = 1;
+
+                if (g.is_weighted())
+                {
+                    NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).v;
+                    #pragma omp atomic write
+                    a[dest] = 1;
+                }
+                else
+                {
+                    #pragma omp atomic write
+                    a[neighbor] = 1;
+                }
+            }
+        }
+
+        __gnu_parallel::partial_sum(a.begin(), a.end(), a.begin());
+
+        // Parallel loop to construct the edge list
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < num_nodes; ++i)
+        {
+            NodeID_ out_start = g.out_offset(i);
+            NodeID_ j = 0;
+            for (DestID_ neighbor : g.out_neigh(i))
+            {
+                NodeID_ new_u = a[i];
+
                 if (g.is_weighted())
                 {
                     NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).v;
                     WeightT_ weight =
                         static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).w;
-                    el[in_start + j] =
-                        Edge(dest, NodeWeight<NodeID_, WeightT_>(i, weight));
+                    NodeID_ new_v = a[dest];
+
+                    if(new_u > new_v)
+                        el[out_start + j] = Edge(new_v, NodeWeight<NodeID_, WeightT_>(new_u, weight));
+                    else
+                        el[out_start + j] = Edge(new_u, NodeWeight<NodeID_, WeightT_>(new_v, weight));
                 }
                 else
                 {
-                    el[in_start + j] = Edge(neighbor, i);
+                    NodeID_ new_v = a[neighbor];
+                    if(new_u > new_v)
+                        el[out_start + j] = Edge(new_v, new_u);
+                    else
+                        el[out_start + j] = Edge(new_u, new_v);
                 }
 
                 ++j;
@@ -716,7 +821,7 @@ public:
         return partitions;
     }
 
-    std::pair<std::vector<EdgeList>, std::vector<pvector<NodeID_>>>
+    std::vector<EdgeList>
     MakeTrustPartitionedEL(const CSRGraph<NodeID_, DestID_, invert> &g,
                            int p_n = 1, int p_m = 1)
     {
@@ -724,19 +829,32 @@ public:
         int num_partitions = p_n * p_m;
         int num_threads = omp_get_max_threads();
         std::vector<EdgeList> partitions_el(num_partitions);
-        std::vector<EdgeList> partitions_el_dest(p_m);
 
         // Local edge lists for each thread
         std::vector<std::vector<EdgeList>> local_partitions_el(num_threads);
-        std::vector<std::vector<EdgeList>> local_partitions_el_dest(num_threads);
-
-        std::vector<CSRGraph<NodeID_, DestID_, invert>> partitions_g(p_m);
-        std::vector<pvector<NodeID_>> partitions_new_ids(p_m);
 
         for (int thread_id = 0; thread_id < num_threads; ++thread_id)
         {
             local_partitions_el[thread_id].resize(num_partitions);
-            local_partitions_el_dest[thread_id].resize(p_m);
+        }
+
+        trust_endofprocess = std::numeric_limits<NodeID_>::max();
+
+        #pragma omp parallel
+        {
+            #pragma omp for schedule(static)
+            for (NodeID_ i = 0; i < g.num_nodes(); ++i)
+            {
+                if (g.out_degree(i) < 2)
+                {
+                    // Use atomic compare-and-swap to update trust_endofprocess
+                    int current_value = trust_endofprocess;
+                    while (i < current_value && !__sync_bool_compare_and_swap(&trust_endofprocess, current_value, i))
+                    {
+                        current_value = trust_endofprocess;
+                    }
+                }
+            }
         }
 
         #pragma omp parallel
@@ -749,139 +867,33 @@ public:
             for (NodeID_ i = 0; i < g.num_nodes(); ++i)
             {
                 NodeID_ src = i;
-
                 for (DestID_ j : g.out_neigh(i))
                 {
                     if (g.is_weighted())
                     {
-                        NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(j).v;
-                        WeightT_ weight = static_cast<NodeWeight<NodeID_, WeightT_>>(j).w;
-                        int partition_idx = (dest % p_m);
-                        Edge e = Edge(src, NodeWeight<NodeID_, WeightT_>(dest, weight));
-                        local_partitions_el_dest[thread_id][partition_idx].push_back(e);
+                        NodeID_ dest = static_cast<NodeWeight<NodeID_,
+                                WeightT_>>(j).v;
+                        WeightT_ weight =
+                            static_cast<NodeWeight<NodeID_, WeightT_>>(j).w;
+                        int
+                        partition_idx = (src % p_n) * p_m + (dest % p_m);
+                        Edge e =
+                            Edge(src / p_n, NodeWeight<NodeID_, WeightT_>(dest / p_m, weight));
+                        local_partitions_el[thread_id][partition_idx].push_back(e);
                     }
                     else
                     {
                         NodeID_ dest = j;
-                        int partition_idx = (dest % p_m);
-                        Edge e = Edge(src, dest);
-                        // std::cout << partition_idx << ": " <<  src << " -> " << dest <<
-                        // std::endl;
-                        local_partitions_el_dest[thread_id][partition_idx].push_back(e);
+                        int partition_idx = (src % p_n) * p_m + (dest % p_m);
+                        Edge e = Edge(src / p_n, dest / p_m);
+                        // Edge e = Edge(src, dest);
+                        // std::cout << partition_idx << " p: " <<  src << " -> " <<
+                        //           dest << std::endl;
+                        local_partitions_el[thread_id][partition_idx].push_back(e);
                     }
                 }
             }
         }
-
-        // Parallel merge of local partitions into the global partitions
-        #pragma omp parallel for schedule(dynamic)
-        for (int i = 0; i < p_m; ++i)
-        {
-            for (int t = 0; t < num_threads; ++t)
-            {
-                partitions_el_dest[i].reserve(partitions_el_dest[i].size() +
-                                              local_partitions_el_dest[t][i].size());
-            }
-            for (int t = 0; t < num_threads; ++t)
-            {
-                partitions_el_dest[i].insert(partitions_el_dest[i].end(),
-                                             local_partitions_el_dest[t][i].begin(),
-                                             local_partitions_el_dest[t][i].end());
-            }
-        }
-
-        // Create graphs from each column partition and generate new IDs
-        for (int i = 0; i < p_m; ++i)
-        {
-            if (partitions_el_dest[i].empty())
-            {
-                partitions_g[i] = CSRGraph<NodeID_, DestID_, invert>();
-                partitions_new_ids[i] = pvector<NodeID_>();
-                continue;
-            }
-            CSRGraph<NodeID_, DestID_, invert> partition_g =
-                MakeLocalGraphFromEL(partitions_el_dest[i]);
-            pvector<NodeID_> new_ids(partition_g.num_nodes(), -1);
-            // partition_g = SquishGraph(partition_g);
-            GenerateSortMapping(partition_g, new_ids, true, false);
-            partitions_new_ids[i] = std::move(new_ids);
-            partitions_g[i] = std::move(partition_g);
-        }
-
-        for (int dest_p = 0; dest_p < p_m; ++dest_p)
-        {
-            CSRGraph<NodeID_, DestID_, invert> partition_g =
-                std::move(partitions_g[dest_p]);
-            // partition_g.PrintTopology();
-            if (partition_g.num_nodes() == 0)
-            {
-                continue;
-            }
-
-            #pragma omp parallel
-            {
-                int thread_id = omp_get_thread_num();
-                // Each thread processes a portion of the nodes
-                #pragma omp for schedule(static)
-                for (NodeID_ i = 0; i < partition_g.num_nodes(); ++i)
-                {
-                    NodeID_ src = i;
-                    for (DestID_ j : partition_g.out_neigh(i))
-                    {
-                        if (partition_g.is_weighted())
-                        {
-                            NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(j).v;
-                            WeightT_ weight = static_cast<NodeWeight<NodeID_, WeightT_>>(j).w;
-                            int partition_idx = (src % p_n) * p_m + (dest % p_m);
-                            Edge e = Edge(src, NodeWeight<NodeID_, WeightT_>(dest, weight));
-                            local_partitions_el[thread_id][partition_idx].push_back(e);
-                        }
-                        else
-                        {
-                            NodeID_ dest = j;
-                            int partition_idx = (src % p_n) * p_m + (dest % p_m);
-                            Edge e = Edge(src, dest);
-                            local_partitions_el[thread_id][partition_idx].push_back(e);
-                        }
-                    }
-                }
-            }
-        }
-
-        // #pragma omp parallel
-        // {
-
-        //     int thread_id = omp_get_thread_num();
-
-        //     // Each thread processes a portion of the nodes
-        //     #pragma omp for schedule(static)
-        //     for (NodeID_ i = 0; i < g.num_nodes(); ++i)
-        //     {
-        //         NodeID_ src = i;
-
-        //         for (DestID_ j : g.out_neigh(i))
-        //         {
-        //             if (g.is_weighted())
-        //             {
-        //                 NodeID_ dest = static_cast<NodeWeight<NodeID_,
-        //                 WeightT_>>(j).v; WeightT_ weight =
-        //                 static_cast<NodeWeight<NodeID_, WeightT_>>(j).w; int
-        //                 partition_idx = (src % p_n) * p_m + (dest % p_m); Edge e =
-        //                 Edge(src, NodeWeight<NodeID_, WeightT_>(dest, weight));
-        //                 local_partitions_el[thread_id][partition_idx].push_back(e);
-        //             }
-        //             else
-        //             {
-        //                 NodeID_ dest = j;
-        //                 int partition_idx = (src % p_n) * p_m + (dest % p_m);
-        //                 Edge e = Edge(src, dest);
-        //                 // std::cout << partition_idx << ": " <<  src << " -> " <<
-        //                 dest << std::endl;
-        //                 local_partitions_el[thread_id][partition_idx].push_back(e);
-        //             }
-        //         }
-        //     }
-        // }
 
         // Parallel merge of local partitions into the global partitions
         #pragma omp parallel for schedule(dynamic)
@@ -900,8 +912,383 @@ public:
             }
         }
 
-        return std::make_pair(std::move(partitions_el),
-                              std::move(partitions_new_ids));
+        return partitions_el;
+    }
+
+    static bool trust_cmp1(trust_edge_list a, trust_edge_list b)
+    {
+        return a.edge.size() < b.edge.size() ;
+    }
+    static bool trust_cmp2(trust_edge_list a, trust_edge_list b)
+    {
+        return a.edge.size() > b.edge.size() ;
+    }
+    // vector<edge_list> vertexb;
+
+    CSRGraph<NodeID_, DestID_, invert> MakeTrustPreprocessStep(const CSRGraph<NodeID_, DestID_, invert> &g)
+    {
+        // int64_t num_edges = g.num_edges_directed();
+        int64_t num_nodes = g.num_nodes();
+        CSRGraph<NodeID_, DestID_, invert> sort_g;
+
+        // Vector to store node-degree pairs
+        std::vector<std::pair<NodeID_, int64_t>> node_degree_pairs(num_nodes);
+
+        // Parallel loop to calculate the degree of each node
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < num_nodes; ++i)
+        {
+            int64_t degree = g.out_degree(i);
+            node_degree_pairs[i] = std::make_pair(i, degree);
+        }
+
+        // Sort the node-degree pairs in descending order of degree
+        __gnu_parallel::stable_sort(node_degree_pairs.begin(), node_degree_pairs.end(),
+                                    [](const std::pair<NodeID_, int64_t> &a, const std::pair<NodeID_, int64_t> &b)
+        {
+            if (a.second == 0) return false;  // a stays if it has degree 0
+            if (b.second == 0) return true;   // b goes to the end if it has degree 0
+            return a.second < b.second;       // otherwise sort in descending orde
+        });
+
+        // for (size_t i = 0; i < node_degree_pairs.size(); ++i)
+        // {
+        //     std::cout << "Node " << std::to_string(node_degree_pairs[i].first)
+        //               << ": Degree " << std::to_string(node_degree_pairs[i].second)
+        //               << std::endl;
+        // }
+
+        // Create a mapping from old IDs to new IDs based on sorted order
+        std::vector<NodeID_> old_to_new_id(num_nodes);
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < num_nodes; ++i)
+        {
+            old_to_new_id[node_degree_pairs[i].first] = i;
+        }
+
+        // g.PrintTopologyOrdered(node_degree_pairs);
+        // Create local edge lists for each thread
+        std::vector<EdgeList> local_edge_lists(omp_get_max_threads());
+
+        // Parallel loop to orient the edges and create local edge lists
+        #pragma omp parallel
+        {
+            int thread_id = omp_get_thread_num();
+            EdgeList &local_el = local_edge_lists[thread_id];
+
+            #pragma omp for nowait
+            for (NodeID_ i = 0; i < num_nodes; ++i)
+            {
+                NodeID_ new_u = node_degree_pairs[i].first;
+                for (DestID_ neighbor : g.out_neigh(new_u))
+                {
+                    if (g.is_weighted())
+                    {
+                        NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).v;
+                        WeightT_ weight = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).w;
+                        NodeID_ new_v = old_to_new_id[dest];
+                        if (i < new_v)  // Orient edges from lower to higher new ID
+                        {
+                            Edge e = Edge(new_u, NodeWeight<NodeID_, WeightT_>(dest, weight));
+                            local_el.push_back(e);
+                        }
+                    }
+                    else
+                    {
+                        NodeID_ new_v = old_to_new_id[neighbor];
+                        if (i < new_v)  // Orient edges from lower to higher new ID
+                        {
+                            Edge e = Edge(new_u, neighbor);
+                            local_el.push_back(e);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Merge local edge lists into a single edge list
+        EdgeList el;
+        for (const auto &local_el : local_edge_lists)
+        {
+            el.insert(el.end(), local_el.begin(), local_el.end());
+        }
+
+        // PrintEdgeList(el);
+
+        sort_g = MakeLocalGraphFromEL(el);
+
+        sort_g.PrintTopology();
+
+        // Vector to store node-degree pairs
+        std::vector<std::pair<NodeID_, int64_t>> node_degree_pairs_sort(sort_g.num_nodes());
+
+        // Parallel loop to calculate the degree of each node
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < sort_g.num_nodes(); ++i)
+        {
+            int64_t degree = sort_g.out_degree(i);
+            node_degree_pairs_sort[i] = std::make_pair(i, degree);
+        }
+
+        // Sort the node-degree pairs in descending order of degree
+        __gnu_parallel::stable_sort(node_degree_pairs_sort.begin(), node_degree_pairs_sort.end(),
+                                    [](const std::pair<NodeID_, int64_t> &a, const std::pair<NodeID_, int64_t> &b)
+        {
+            if (a.second == 0) return false;  // a stays if it has degree 0
+            if (b.second == 0) return true;   // b goes to the end if it has degree 0
+            return a.second > b.second;       // otherwise sort in descending orde
+        });
+
+        sort_g.PrintTopologyOrdered(node_degree_pairs_sort);
+
+        pvector<NodeID_> new_ids(sort_g.num_nodes(), -1);
+        GenerateSortMapping(sort_g, new_ids, true, false);
+        sort_g = RelabelByMapping(sort_g, new_ids);
+
+        return sort_g;
+    }
+
+    void printTrustVertexStructure()
+    {
+        for (const auto &v : trust_vertex)
+        {
+            std::cout << "Trust Vertex " << v.vertexID << ": ";
+            for (const auto &e : v.edge)
+            {
+                std::cout << e << " ";
+            }
+            std::cout << std::endl;
+        }
+    }
+
+    void trust_orientation()
+    {
+        NodeID_ *a = new NodeID_[trust_vertex_count];
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            a[trust_vertex[i].vertexID] = i;
+        }
+
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            vector<NodeID_> x(trust_vertex[i].edge);
+            trust_vertex[i].edge.clear();
+            while (!x.empty())
+            {
+                NodeID_ v = x.back();
+                x.pop_back();
+                if (a[v] > i) trust_vertex[i].edge.push_back(v);
+            }
+        }
+
+        delete[] a;
+    }
+
+    void trust_reassignID()
+    {
+        NodeID_ k1 = 0, k2 = -1, k3 = -1;
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            trust_vertex[i].newid = -1;
+            if (k2 == -1 && trust_vertex[i].edge.size() <= 100)
+                k2 = i;
+
+            if (k3 == -1 && trust_vertex[i].edge.size() < 2)
+                k3 = i;
+        }
+        std::cout << k2 << ' ' << k3 << std::endl;
+        NodeID_ s2 = k2, s3 = k3;
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            if (trust_vertex[i].edge.size() <= 2) break;
+            for (size_t j = 0; j < trust_vertex[i].edge.size(); j++)
+            {
+                NodeID_ v = trust_vertex[i].edge[j];
+                if (trust_vertex[v].newid == -1)
+                {
+                    if (v >= s3)
+                    {
+                        trust_vertex[v].newid = k3;
+                        k3++;
+                    }
+                    else if (v >= s2)
+                    {
+                        trust_vertex[v].newid = k2;
+                        k2++;
+                    }
+                    else
+                    {
+                        trust_vertex[v].newid = k1;
+                        k1++;
+                    }
+                }
+            }
+        }
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            int u = trust_vertex[i].newid;
+            if (u == -1)
+            {
+                if (i >= s3)
+                {
+                    trust_vertex[i].newid = k3;
+                    k3++;
+                }
+                else if (i >= s2)
+                {
+                    trust_vertex[i].newid = k2;
+                    k2++;
+                }
+                else
+                {
+                    trust_vertex[i].newid = k1;
+                    k1++;
+                }
+            }
+        }
+        trust_vertexb.swap(trust_vertex);
+        trust_vertex.resize(trust_vertex_count);
+
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            NodeID_ u = trust_vertexb[i].newid;
+
+            for (size_t j = 0; j < trust_vertexb[i].edge.size(); j++)
+            {
+                NodeID_ v = trust_vertexb[i].edge[j];
+                v = trust_vertexb[v].newid;
+                // cout<<u<<' '<<v<<endl;
+                trust_vertex[u].edge.push_back(v);
+            }
+        }
+
+    }
+
+    void trust_computeCSR()
+    {
+        NodeID_ *a = new NodeID_[trust_vertex_count];
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            a[trust_vertex[i].vertexID] = i;
+        }
+        for (NodeID_ i = 0; i < trust_vertex_count; i++)
+        {
+            for (size_t j = 0; j < trust_vertex[i].edge.size(); j++)
+            {
+                trust_vertex[i].edge[j] = a[trust_vertex[i].edge[j]];
+            }
+            trust_vertex[i].vertexID = i;
+        }
+
+        trust_reassignID();
+
+        delete[] a;
+    }
+
+    CSRGraph<NodeID_, DestID_, invert> MakeTrustOrigianlPreprocessStep(const CSRGraph<NodeID_, DestID_, invert> &g)
+    {
+
+        CSRGraph<NodeID_, DestID_, invert> sort_g;
+        trust_vertex_count = g.num_nodes();
+        trust_vertex.resize(trust_vertex_count);
+        trust_edge_count = g.num_edges_directed();
+
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < trust_vertex_count; ++i)
+        {
+            trust_vertex[i].vertexID = i;
+            trust_vertex[i].edge.insert(trust_vertex[i].edge.end(), g.out_neigh(i).begin(), g.out_neigh(i).end());
+            trust_vertex[i].newid = -1; // Assuming newid is to be initialized to -1
+        }
+
+        __gnu_parallel::stable_sort(trust_vertex.begin(), trust_vertex.end(), trust_cmp1);
+
+        if(cli_.logging_en())
+        {
+            std::cout << "Before orientation:" << std::endl;
+            printTrustVertexStructure();
+        }
+
+        trust_orientation();
+
+        if(cli_.logging_en())
+        {
+            std::cout << "After orientation:" << std::endl;
+            printTrustVertexStructure();
+        }
+
+        __gnu_parallel::stable_sort(trust_vertex.begin(), trust_vertex.end(), trust_cmp2);
+
+        if(cli_.logging_en())
+        {
+            std::cout << "After sort:" << std::endl;
+            printTrustVertexStructure();
+        }
+
+        trust_computeCSR();
+
+        if(cli_.logging_en())
+        {
+            std::cout << "After computeCSR:" << std::endl;
+            printTrustVertexStructure();
+        }
+
+        trust_edge_count = 0;
+        #pragma omp parallel for reduction(+: trust_edge_count)
+        for (NodeID_ i = 0; i < trust_vertex_count; ++i)
+        {
+            trust_edge_count += trust_vertex[i].edge.size();
+        }
+
+        if(cli_.logging_en())
+        {
+            std::cout << "trust_edge_count: " << std::to_string(trust_edge_count) << std::endl;
+        }
+
+        vector<NodeID_> trust_vertex_edge_sizes(trust_vertex_count);
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < trust_vertex_count; ++i)
+        {
+            trust_vertex_edge_sizes[i] = trust_vertex[i].edge.size();
+        }
+
+        std::vector<size_t> trust_vertex_offset(trust_vertex_count + 1, 0);
+        __gnu_parallel::partial_sum(trust_vertex_edge_sizes.begin(), trust_vertex_edge_sizes.end(), trust_vertex_offset.begin() + 1);
+
+        EdgeList trust_el(trust_edge_count);
+
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < trust_vertex_count; ++i)
+        {
+            NodeID_ out_start = trust_vertex_offset[i];
+            NodeID_ j = 0;
+            for (NodeID_ neighbor : trust_vertex[i].edge)
+            {
+                if (g.is_weighted())
+                {
+                    WeightT_ weight = 1;
+                    trust_el[out_start + j] = Edge(i, NodeWeight<NodeID_, WeightT_>(neighbor, weight));
+                }
+                else
+                {
+                    trust_el[out_start + j] = Edge(i, neighbor);
+                }
+                ++j;
+            }
+        }
+
+        sort_g  = MakeLocalGraphFromEL(trust_el);
+
+        if(cli_.logging_en())
+        {
+            std::cout << "After sort_g MakeLocalGraphFromEL:" << std::endl;
+            printTrustVertexStructure();
+
+            // PrintEdgeList(trust_el);
+
+            sort_g.PrintTopology();
+        }
+        return sort_g;
     }
 
     std::vector<CSRGraph<NodeID_, DestID_, invert>>
@@ -920,31 +1307,45 @@ public:
         std::vector<pvector<NodeID_>> partitions_new_ids;
 
         CSRGraph<NodeID_, DestID_, invert> uni_g;
-        CSRGraph<NodeID_, DestID_, invert> org_g;
+        CSRGraph<NodeID_, DestID_, invert> dir_g;
+        CSRGraph<NodeID_, DestID_, invert> prep_g;
         EdgeList uni_el;
+        EdgeList dir_el;
 
-        pvector<NodeID_> new_ids_g(g.num_nodes(), -1);
-        GenerateSortMapping(g, new_ids_g, true, true);
-        org_g = RelabelByMapping(g, new_ids_g);
+        // Start fromDirectToUndirect Step
+        dir_el = MakeTrustDirectELFromGraph(g);
+        dir_g  = MakeLocalGraphFromEL(dir_el);
+        // dir_g  = SquishGraph(dir_g);
 
-        uni_el = MakeUniDirectELFromGraph(org_g);
-        // PrintEdgeList(uni_el);
-        // std::cout << std::endl;
-        MakeOrientedELFromUniDirect(uni_el, org_g);
-        // PrintEdgeList(uni_el);
-        // std::cout << std::endl;
+        if(cli_.logging_en())
+        {
+            dir_g.PrintTopology();
+            std::cout << std::endl;
+        }
 
-        uni_g = MakeLocalGraphFromEL(uni_el);
-        // uni_g = SquishGraph(uni_g);
-        // uni_g.PrintTopology();
-        // std::cout << std::endl;
+        NodeID_ min_seen = FindMinNodeID(dir_el);
 
-        pvector<NodeID_> new_ids(uni_g.num_nodes(), -1);
-        GenerateSortMapping(uni_g, new_ids, true, false);
-        uni_g = RelabelByMapping(uni_g, new_ids);
+        uni_el = MakeUniDirectELFromGraph(dir_g, min_seen);
+        uni_g  = MakeLocalGraphFromEL(uni_el);
+        // uni_g  = SquishGraph(uni_g);
 
-        std::tie(partitions_el, partitions_new_ids) =
-            MakeTrustPartitionedEL(uni_g, p_n, p_m);
+        if(cli_.logging_en())
+        {
+            uni_g.PrintTopology();
+            std::cout << std::endl;
+        }
+
+        // End fromDirectToUndirect Step
+        prep_g = MakeTrustOrigianlPreprocessStep(uni_g);
+
+        if(cli_.logging_en())
+        {
+            prep_g.PrintTopology();
+            std::cout << std::endl;
+        }
+
+        partitions_el =
+            MakeTrustPartitionedEL(prep_g, p_n, p_m);
 
         // Create graphs from each partition in column-major order and add to
         // partitions_g
@@ -955,8 +1356,6 @@ public:
                 int idx = row * p_m + col;
                 CSRGraph<NodeID_, DestID_, invert> partition_g =
                     MakeLocalGraphFromEL(partitions_el[idx]);
-                // partition_g = RelabelByMapping(partition_g, partitions_new_ids[col]);
-                // partition_g = SquishGraph(partition_g);
                 partitions_g[idx] = std::move(partition_g);
             }
         }
@@ -1345,7 +1744,7 @@ public:
         }
     }
 
-    void GenerateMapping(const CSRGraph<NodeID_, DestID_, invert> &g,
+    void GenerateMapping(CSRGraph<NodeID_, DestID_, invert> &g,
                          pvector<NodeID_> &new_ids,
                          ReorderingAlgo reordering_algo, bool useOutdeg,
                          std::vector<std::string> reordering_options)
@@ -1375,8 +1774,22 @@ public:
             // RandOrder(g, new_ids, false, false);
             break;
         case RabbitOrder:
-            GenerateRabbitOrderMapping(g, new_ids);
-            break;
+        {
+            // MakeLocalGraphFromEL(partitions_el_dest[i]);
+            pvector<NodeID_> new_ids_local(g.num_nodes(), -1);
+            pvector<NodeID_> new_ids_local_2(g.num_nodes(), -1);
+            // partition_g = SquishGraph(partition_g);
+            GenerateSortMappingRabbit(g, new_ids_local, true, true);
+            CSRGraph<NodeID_, DestID_, invert> g_trans = RelabelByMapping(g, new_ids_local);
+            GenerateRabbitOrderMapping(g_trans, new_ids_local_2);
+
+            #pragma omp parallel for
+            for (NodeID_ n = 0; n < g.num_nodes(); n++)
+            {
+                new_ids[n] = new_ids_local_2[new_ids_local[n]];
+            }
+        }
+        break;
         case GOrder:
             GenerateGOrderMapping(g, new_ids);
             break;
@@ -1390,7 +1803,7 @@ public:
             GenerateLeidenMapping(g, new_ids, reordering_options);
             break;
         case GraphBrewOrder:
-            GenerateGraphBrewMapping(g, new_ids, useOutdeg, reordering_options);
+            GenerateGraphBrewMapping(g, new_ids, useOutdeg, reordering_options, 2);
             break;
         case MAP:
             LoadMappingFromFile(g, new_ids, reordering_options);
@@ -1417,12 +1830,14 @@ public:
     }
 
     void
-    GenerateMappingLocalEdgelist(EdgeList &el, pvector<NodeID_> &new_ids,
+    GenerateMappingLocalEdgelist(const CSRGraph<NodeID_, DestID_, invert> &g_org, EdgeList &el, pvector<NodeID_> &new_ids,
                                  ReorderingAlgo reordering_algo, bool useOutdeg,
                                  std::vector<std::string> reordering_options, int numLevels = 1, bool recursion = false)
     {
 
+        omp_set_nested(1);
         CSRGraph<NodeID_, DestID_, invert> g = MakeLocalGraphFromEL(el);
+        g.copy_org_ids(g_org.get_org_ids());
 
         switch (reordering_algo)
         {
@@ -1449,8 +1864,23 @@ public:
             // RandOrder(g, new_ids, false, false);
             break;
         case RabbitOrder:
-            GenerateRabbitOrderMapping(g, new_ids);
-            break;
+        {
+            // MakeLocalGraphFromEL(partitions_el_dest[i]);
+            pvector<NodeID_> new_ids_local(g_org.num_nodes(), -1);
+            pvector<NodeID_> new_ids_local_2(g_org.num_nodes(), -1);
+            // partition_g = SquishGraph(partition_g);
+            GenerateSortMappingRabbit(g, new_ids_local, true, true);
+            g = RelabelByMapping(g, new_ids_local);
+
+            GenerateRabbitOrderMapping(g, new_ids_local_2);
+
+            #pragma omp parallel for
+            for (NodeID_ n = 0; n < g_org.num_nodes(); n++)
+            {
+                new_ids[n] = new_ids_local_2[new_ids_local[n]];
+            }
+        }
+        break;
         case GOrder:
             GenerateGOrderMapping(g, new_ids);
             break;
@@ -2080,8 +2510,10 @@ public:
             #pragma omp parallel for
             for (int64_t v = 0; v < num_nodes; ++v)
             {
+
                 int64_t out_degree_v = g.out_degree(v);
                 degree_id_pairs[v] = std::make_pair(out_degree_v, v);
+
             }
         }
         else
@@ -2091,26 +2523,76 @@ public:
             {
                 int64_t in_degree_v = g.in_degree(v);
                 degree_id_pairs[v] = std::make_pair(in_degree_v, v);
+
             }
         }
 
-        if (lesser)
+        auto custom_comparator = [lesser](const degree_nodeid_t &a, const degree_nodeid_t &b)
         {
-            __gnu_parallel::stable_sort(degree_id_pairs.begin(),
-                                        degree_id_pairs.end(),
-                                        std::less<degree_nodeid_t>());
-        }
-        else
-        {
-            __gnu_parallel::stable_sort(degree_id_pairs.begin(),
-                                        degree_id_pairs.end(),
-                                        std::greater<degree_nodeid_t>());
-        }
+            // if (a.first == 0 && b.first == 0) return false; // Keep relative order of zero-degree nodes
+            // if (a.first == 0) return false; // Zero-degree nodes should be "greater"
+            // if (b.first == 0) return true;  // Zero-degree nodes should be "greater"
+            return lesser ? (a.first < b.first) : (a.first > b.first);
+
+            // return a.first > b.first;
+        };
+
+        __gnu_parallel::stable_sort(degree_id_pairs.begin(), degree_id_pairs.end(), custom_comparator);
+
 
         #pragma omp parallel for
         for (int64_t n = 0; n < num_nodes; ++n)
         {
             new_ids[degree_id_pairs[n].second] = n;
+        }
+
+        pvector<degree_nodeid_t>().swap(degree_id_pairs);
+
+        t.Stop();
+        PrintTime("Sort Map Time", t.Seconds());
+    }
+
+    void GenerateSortMappingRabbit(const CSRGraph<NodeID_, DestID_, invert> &g,
+                                   pvector<NodeID_> &new_ids, bool useOutdeg,
+                                   bool lesser = false)
+    {
+
+        typedef std::tuple<int64_t, int64_t, NodeID_> degree_nodeid_t;
+
+        Timer t;
+        t.Start();
+
+        int64_t num_nodes = g.num_nodes();
+        pvector<degree_nodeid_t> degree_id_pairs(num_nodes);
+
+        #pragma omp parallel for
+        for (int64_t v = 0; v < num_nodes; ++v)
+        {
+            int64_t out_degree_v = g.out_degree(v);
+            int64_t in_degree_v = g.in_degree(v);
+            degree_id_pairs[v] = std::make_tuple(out_degree_v, in_degree_v, v);
+        }
+
+        auto custom_comparator = [](const degree_nodeid_t &a, const degree_nodeid_t &b)
+        {
+            int64_t out_a = std::get<0>(a);
+            int64_t out_b = std::get<0>(b);
+            int64_t in_a = std::get<1>(a);
+            int64_t in_b = std::get<1>(b);
+
+            if (out_a == 0 && in_a == 0) return false; // Keep relative order of zero-degree nodes
+            if (out_b == 0 && in_b == 0) return true;  // Zero-degree nodes should be "greater"
+
+            if (out_a != out_b) return out_a > out_b; // Primary sort by out-degree
+            return in_a > in_b;                       // Secondary sort by in-degree
+        };
+
+        __gnu_parallel::stable_sort(degree_id_pairs.begin(), degree_id_pairs.end(), custom_comparator);
+
+        #pragma omp parallel for
+        for (int64_t n = 0; n < num_nodes; ++n)
+        {
+            new_ids[std::get<2>(degree_id_pairs[n])] = n;
         }
 
         pvector<degree_nodeid_t>().swap(degree_id_pairs);
@@ -3490,11 +3972,11 @@ public:
             return std::max(s, std::max(std::get<0>(e), std::get<1>(e)) + 1);
         });
 
-        if (const size_t c = count_unused_id(n, edges))
-        {
-            // std::cerr << "WARNING: " << c << "/" << n << " vertex IDs are unused"
-            // << " (zero-degree vertices or noncontiguous IDs?)\n";
-        }
+        // if (const size_t c = count_unused_id(n, edges))
+        // {
+        // std::cerr << "WARNING: " << c << "/" << n << " vertex IDs are unused"
+        // << " (zero-degree vertices or noncontiguous IDs?)\n";
+        // }
 
         return make_adj_list(n, edges);
     }
@@ -3544,9 +4026,10 @@ public:
             return std::max(s, std::max(std::get<0>(e), std::get<1>(e)) + 1);
         });
 
-        // if (const size_t c = count_unused_id(n, edges)) {
-        //   std::cerr << "WARNING: " << c << "/" << n << " vertex IDs are unused"
-        //             << " (zero-degree vertices or noncontiguous IDs?)\n";
+        // if (const size_t c = count_unused_id(n, edges))
+        // {
+        // std::cerr << "WARNING: " << c << "/" << n << " vertex IDs are unused"
+        //           << " (zero-degree vertices or noncontiguous IDs?)\n";
         // }
 
         return make_adj_list(n, edges);
@@ -3879,44 +4362,41 @@ public:
                                pvector<NodeID_> &new_ids)
     {
 
-        int window = 5;
+        int window = 7;
 
-        // int64_t num_nodes = g.num_nodes();
-        int64_t num_edges = g.num_edges();
+        int64_t num_nodes = g.num_nodes();
+        int64_t num_edges = g.num_edges_directed();
 
-        std::vector<std::pair<int, int>> edges;
-        edges.reserve(num_edges * 2);
-
-        for (NodeID_ i = 0; i < g.num_nodes(); i++)
+        std::vector<std::pair<int, int>> edges(num_edges);
+        edges.reserve(num_edges);
+        // Parallel loop to construct the edge list
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < num_nodes; ++i)
         {
-            for (DestID_ j : g.out_neigh(i))
+            NodeID_ out_start = g.out_offset(i);
+
+            NodeID_ j = 0;
+            for (DestID_ neighbor : g.out_neigh(i))
             {
                 if (g.is_weighted())
-                    edges.push_back({i, static_cast<NodeWeight<NodeID_, WeightT_>>(j).v});
-                else
-                    edges.push_back({i, j});
-            }
-        }
-
-        if (g.directed())
-        {
-            if (num_edges < g.num_edges_directed())
-            {
-                for (NodeID_ i = 0; i < g.num_nodes(); i++)
                 {
-                    for (DestID_ j : g.in_neigh(i))
-                    {
-                        if (g.is_weighted())
-                            edges.push_back(
-                        {i, static_cast<NodeWeight<NodeID_, WeightT_>>(j).v});
-                        else
-                            edges.push_back({i, j});
-                    }
+                    NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).v;
+                    // WeightT_ weight =
+                    //     static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).w;
+
+                    std::pair<int, int>edge =
+                        std::make_pair(i, dest);
+                    edges[out_start + j] = edge;
                 }
+                else
+                {
+                    std::pair<int, int> edge =
+                        std::make_pair(i, neighbor);
+                    edges[out_start + j] = edge;
+                }
+                ++j;
             }
         }
-
-        edges.shrink_to_fit();
 
         Gorder::GoGraph go;
         vector<int> order;
@@ -3953,42 +4433,39 @@ public:
                                  pvector<NodeID_> &new_ids)
     {
 
-        // int64_t num_nodes = g.num_nodes();
-        int64_t num_edges = g.num_edges();
+        int64_t num_nodes = g.num_nodes();
+        int64_t num_edges = g.num_edges_directed();
 
-        std::vector<std::pair<int, int>> edges;
-        edges.reserve(num_edges * 2);
-
-        for (NodeID_ i = 0; i < g.num_nodes(); i++)
+        std::vector<std::pair<int, int>> edges(num_edges);
+        edges.reserve(num_edges);
+        // Parallel loop to construct the edge list
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < num_nodes; ++i)
         {
-            for (DestID_ j : g.out_neigh(i))
+            NodeID_ out_start = g.out_offset(i);
+
+            NodeID_ j = 0;
+            for (DestID_ neighbor : g.out_neigh(i))
             {
                 if (g.is_weighted())
-                    edges.push_back({i, static_cast<NodeWeight<NodeID_, WeightT_>>(j).v});
-                else
-                    edges.push_back({i, j});
-            }
-        }
-
-        if (g.directed())
-        {
-            if (num_edges < g.num_edges_directed())
-            {
-                for (NodeID_ i = 0; i < g.num_nodes(); i++)
                 {
-                    for (DestID_ j : g.in_neigh(i))
-                    {
-                        if (g.is_weighted())
-                            edges.push_back(
-                        {i, static_cast<NodeWeight<NodeID_, WeightT_>>(j).v});
-                        else
-                            edges.push_back({i, j});
-                    }
+                    NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).v;
+                    // WeightT_ weight =
+                    //     static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).w;
+
+                    std::pair<int, int>edge =
+                        std::make_pair(i, dest);
+                    edges[out_start + j] = edge;
                 }
+                else
+                {
+                    std::pair<int, int> edge =
+                        std::make_pair(i, neighbor);
+                    edges[out_start + j] = edge;
+                }
+                ++j;
             }
         }
-
-        edges.shrink_to_fit();
 
         Gorder::GoGraph go;
         vector<int> order;
@@ -4139,70 +4616,10 @@ public:
 
         Timer tm;
 
-        // std::cout << "Options: ";
-        // for (const auto& param : reordering_options) {
-        //   std::cout << param << " ";
-        // }
-        // std::cout << std::endl;
-
         using V = TYPE;
         install_sigsegv();
 
-        int64_t num_nodes = g.num_nodes();
-        int64_t num_edges = g.num_edges();
-
-        std::vector<std::tuple<size_t, size_t, double>> edges;
-        edges.reserve(num_edges * 2);
-
-        for (NodeID_ i = 0; i < g.num_nodes(); i++)
-        {
-            for (DestID_ j : g.out_neigh(i))
-            {
-                if (g.is_weighted())
-                    edges.push_back({i, static_cast<NodeWeight<NodeID_, WeightT_>>(j).v,
-                                     static_cast<NodeWeight<NodeID_, WeightT_>>(j).w});
-                else
-                    edges.push_back({i, j, 1.0f});
-            }
-        }
-
-        if (g.directed())
-        {
-            if (num_edges < g.num_edges_directed())
-            {
-                for (NodeID_ i = 0; i < g.num_nodes(); i++)
-                {
-                    for (DestID_ j : g.in_neigh(i))
-                    {
-                        if (g.is_weighted())
-                            edges.push_back(
-                        {
-                            i, static_cast<NodeWeight<NodeID_, WeightT_>>(j).v,
-                                    static_cast<NodeWeight<NodeID_, WeightT_>>(j).w});
-                        else
-                            edges.push_back({i, j, 1.0f});
-                    }
-                }
-            }
-        }
-
-        edges.shrink_to_fit();
-
-        tm.Start();
-        bool symmetric = false;
-        bool weighted = g.is_weighted();
-        DiGraph<K, None, V> x;
-        readVecOmpW(x, edges, num_nodes, symmetric,
-                    weighted); // LOG(""); println(x);
-        edges.clear();
-        if (!symmetric)
-        {
-            x = symmetricizeOmp(x);
-        } //; LOG(""); print(x); printf(" (->symmetricize)\n"); }
-        tm.Stop();
-        PrintTime("DiGraph graph", tm.Seconds());
-
-        double resolution = 0.8;
+        double resolution = 0.75;
         int maxIterations = 30;
         /** Maximum number of passes [10]. */
         int maxPasses = 30;
@@ -4210,7 +4627,7 @@ public:
         if (!reordering_options.empty())
         {
             resolution = std::stod(reordering_options[0]);
-            resolution = (resolution > 1) ? 0.8 : resolution;
+            resolution = (resolution > 3) ? 1.0 : resolution;
         }
         if (reordering_options.size() > 1)
         {
@@ -4221,12 +4638,58 @@ public:
             maxPasses = std::stoi(reordering_options[2]);
         }
 
+        int64_t num_nodes = g.num_nodes();
+        int64_t num_edges = g.num_edges_directed();
+
+        std::vector<std::tuple<size_t, size_t, double>> edges(num_edges);
+        edges.reserve(num_edges);
+        // Parallel loop to construct the edge list
+        #pragma omp parallel for
+        for (NodeID_ i = 0; i < num_nodes; ++i)
+        {
+            NodeID_ out_start = g.out_offset(i);
+
+            NodeID_ j = 0;
+            for (DestID_ neighbor : g.out_neigh(i))
+            {
+                if (g.is_weighted())
+                {
+                    NodeID_ dest = static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).v;
+                    WeightT_ weight =
+                        static_cast<NodeWeight<NodeID_, WeightT_>>(neighbor).w;
+
+                    std::tuple<size_t, size_t, double> edge =
+                        std::make_tuple(i, dest, weight);
+                    edges[out_start + j] = edge;
+                }
+                else
+                {
+                    std::tuple<size_t, size_t, double> edge =
+                        std::make_tuple(i, neighbor, 1.0f);
+                    edges[out_start + j] = edge;
+                }
+                ++j;
+            }
+        }
+
+        tm.Start();
+        bool symmetric = false;
+        bool weighted = g.is_weighted();
+        DiGraph<K, None, V> x;
+        readVecOmpW(x, edges, num_nodes, symmetric,
+                    weighted); // LOG(""); println(x);
+        edges.clear();
+        x = symmetricizeOmp(x);
+
+        tm.Stop();
+        PrintTime("DiGraph graph", tm.Seconds());
+
         runExperiment(x, resolution, maxIterations, maxPasses);
 
         size_t num_nodesx;
         size_t num_passes;
         num_nodesx = x.span();
-        num_passes = x.communityMappingPerPass.size() + 3;
+        num_passes = x.communityMappingPerPass.size() + 2;
 
         std::vector<std::vector<K>> communityVectorTuplePerPass(
                                      num_nodesx, std::vector<K>(num_passes, 0));
@@ -4235,64 +4698,26 @@ public:
         #pragma omp parallel for
         for (size_t i = 0; i < num_nodesx; ++i)
         {
-            communityVectorTuplePerPass[i][0] = UINT_E_MAX;
-            communityVectorTuplePerPass[i][1] = i;
-            communityVectorTuplePerPass[i][2] = x.degree(i);
+            communityVectorTuplePerPass[i][0] = i;
+            communityVectorTuplePerPass[i][1] = x.degree(i);
         }
 
-        for (size_t i = 0; i < num_passes - 3; ++i)
+        for (size_t i = 0; i < num_passes - 2; ++i)
         {
             #pragma omp parallel for
             for (size_t j = 0; j < num_nodesx; ++j)
             {
-                communityVectorTuplePerPass[j][3 + i] = x.communityMappingPerPass[i][j];
+                communityVectorTuplePerPass[j][2 + i] = x.communityMappingPerPass[i][j];
             }
         }
 
         // sort_by_vector_element(communityVectorTuplePerPass, 2);
         sort_by_vector_element(communityVectorTuplePerPass, num_passes - 1);
 
-        // auto running_v_id = 0;
-        // auto running_v_hops = 0;
-        // int64_t avgDegree = g.num_edges() / g.num_nodes() + 1;
-
-        // for (int64_t i = 0; i < num_nodes; i++)
-        // {
-        //     if (communityVectorTuplePerPass[i][0] == UINT_E_MAX)
-        //     {
-        //         auto current_com_id = communityVectorTuplePerPass[i][num_passes - 1];
-        //         communityVectorTuplePerPass[i][0] = running_v_id;
-        //         running_v_id++;
-        //         auto current_v_id = communityVectorTuplePerPass[i][1];
-        //         for (int64_t j = (i + 1); j < num_nodes; j++)
-        //         {
-        //             auto next_com_id = communityVectorTuplePerPass[j][num_passes - 1];
-        //             if (current_com_id != next_com_id ||
-        //                     (running_v_hops % avgDegree) == 0)
-        //             {
-        //                 running_v_hops = 0;
-        //                 break;
-        //             }
-        //             auto set_v_id = communityVectorTuplePerPass[j][1];
-        //             if (communityVectorTuplePerPass[j][0] == UINT_E_MAX)
-        //             {
-        //                 if (g.out_neigh(current_v_id).contains(set_v_id))
-        //                 {
-        //                     communityVectorTuplePerPass[j][0] = running_v_id;
-        //                     running_v_id++;
-        //                     running_v_hops++;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-
-        // sort_by_vector_element(communityVectorTuplePerPass, 0);
-
         #pragma omp parallel for
         for (int64_t i = 0; i < num_nodes; i++)
         {
-            new_ids[communityVectorTuplePerPass[i][1]] = (NodeID_)i;
+            new_ids[communityVectorTuplePerPass[i][0]] = (NodeID_)i;
         }
 
         tm.Stop();
@@ -4308,6 +4733,7 @@ public:
     {
 
         Timer tm;
+        Timer tm_2;
 
         // std::cout << "Options: ";
         // for (const auto& param : reordering_options) {
@@ -4323,7 +4749,8 @@ public:
         int64_t num_edges = g.num_edges_directed();
         size_t num_nodesx = num_nodes;
         size_t num_passes = 0;
-        double resolution = 0.8;
+        double resolution = 0.75;
+        // double total_time = 0.0;
         int maxIterations = 30;
         /** Maximum number of passes [10]. */
         int maxPasses = 30;
@@ -4333,7 +4760,6 @@ public:
         const char *reorderingAlgo_arg =
             "8"; // This can be any string representing a valid integer
         ReorderingAlgo algo = getReorderingAlgo(reorderingAlgo_arg);
-
 
         if (!reordering_options.empty())
         {
@@ -4346,7 +4772,7 @@ public:
         if (reordering_options.size() > 2)
         {
             resolution = std::stod(reordering_options[2]);
-            resolution = (resolution > 1) ? 0.75 : resolution;
+            resolution = (resolution > 3) ? 1.0 : resolution;
         }
         if (reordering_options.size() > 3)
         {
@@ -4531,12 +4957,12 @@ public:
         }
 
         // Print the top ten frequencies
-        std::cout << "Top community frequencies:\n";
-        for (size_t i = 0; i < top_communities.size(); ++i)
-        {
-            std::cout << "Community ID " << top_communities[i] << " has frequency "
-                      << freq_comm_pairs[i].first << ".\n";
-        }
+        // std::cout << "Top community frequencies:\n";
+        // for (size_t i = 0; i < top_communities.size(); ++i)
+        // {
+        //     std::cout << "Community ID " << top_communities[i] << " has frequency "
+        //               << freq_comm_pairs[i].first << ".\n";
+        // }
 
         // Create a set of top communities for quick lookup
         std::unordered_set<size_t> top_communities_set(top_communities.begin(),
@@ -4603,16 +5029,16 @@ public:
         }
 
         // Print the segmented edge lists (optional)
-        for (const auto &[comm_id, edge_list] : community_edge_lists)
-        {
-            std::cout << "Community ID " << comm_id
-                      << " edge list: " << edge_list.size() << "\n";
-            // for (const auto &edge : edge_list)
-            // {
-            //     std::cout << "(" << std::get<0>(edge) << ", " << std::get<1>(edge)
-            //     << ", " << std::get<2>(edge) << ")\n";
-            // }
-        }
+        // for (const auto &[comm_id, edge_list] : community_edge_lists)
+        // {
+        //     std::cout << "Community ID " << comm_id
+        //               << " edge list: " << edge_list.size() << "\n";
+        //     // for (const auto &edge : edge_list)
+        //     // {
+        //     //     std::cout << "(" << std::get<0>(edge) << ", " << std::get<1>(edge)
+        //     //     << ", " << std::get<2>(edge) << ")\n";
+        //     // }
+        // }
 
         // Create a vector to store the new_ids vectors for each community
         std::unordered_map<size_t, std::vector<std::pair<size_t, NodeID_>>>
@@ -4644,6 +5070,9 @@ public:
         //     GraphBrewOrder = 13,
         //     MAP = 14,
         // };
+
+        tm_2.Start();
+
         for (size_t idx = 0; idx < top_communities.size(); ++idx)
         {
             size_t comm_id = top_communities[idx];
@@ -4658,15 +5087,52 @@ public:
             std::cout << "Community ID " << comm_id
                       << " edge list: " << edge_list.size() << "\n";
 
-            // if (numLevels && top_communities.size() > 1 && edge_list.size() > 1) {
-            //   algo = ReorderingAlgo::GraphBrewOrder;
-            //   reordering_options[0] = std::to_string(static_cast<int>(frequency_threshold * 1.5));
-            // } else {
-            //   algo = ReorderingAlgo::RabbitOrder;
+
+            ReorderingAlgo reordering_algo_nest = algo;
+
+            if (numLevels > 1 && idx == 0)
+            {
+                reordering_algo_nest = ReorderingAlgo::GraphBrewOrder;
+                // reordering_options[0] = std::to_string(static_cast<int>(frequency_threshold * 1.5));
+                if (reordering_options.size() > 2)
+                {
+                    reordering_options[2] = std::to_string(static_cast<double>(resolution));
+                }
+                else
+                {
+                    reordering_options.push_back(std::to_string(static_cast<double>(resolution)));
+                }
+            }
+
+            // if (numLevels == 1 && idx == 0)
+            // {
+            //     reordering_algo_nest = ReorderingAlgo::RabbitOrder;
             // }
 
-            GenerateMappingLocalEdgelist(edge_list, new_ids_sub, algo, true,
-                                         reordering_options, numLevels, true);
+
+            // Initialize with default values
+            std::vector<std::string> leiden_reordering_options = {"1.0", "30", "30"};
+            std::vector<std::string> next_reordering_options;
+
+            if (reordering_algo_nest == ReorderingAlgo::LeidenOrder)
+            {
+                // Customize options for LeidenOrder
+                leiden_reordering_options[0] = reordering_options[2];
+                leiden_reordering_options[1] = std::to_string(static_cast<int>(maxIterations));
+                leiden_reordering_options[2] = std::to_string(static_cast<int>(maxPasses));
+                std::cout << "Resolution Next: " << reordering_options[2] << std::endl;
+            }
+
+
+            next_reordering_options = (reordering_algo_nest == ReorderingAlgo::LeidenOrder) ? leiden_reordering_options : reordering_options;
+
+
+            if(edge_list.size() > 0)
+                GenerateMappingLocalEdgelist(g, edge_list, new_ids_sub, reordering_algo_nest, true,
+                                             next_reordering_options, numLevels, true);
+            else
+                return;
+
             // Add id pairs to the corresponding community list
             #pragma omp parallel for
             for (size_t i = 0; i < new_ids_sub.size(); ++i)
@@ -4679,6 +5145,8 @@ public:
                 }
             }
         }
+
+        tm_2.Stop();
 
         // Make the mapping consecutive within each community list
         for (auto &entry : community_id_mappings)
@@ -4743,6 +5211,9 @@ public:
         //     std::cout <<  i << "->" << new_ids[i] << std::endl;
         // }
         // std::cout << std::endl;
+
+        if(!recursion)
+            PrintTime("GraphBrew Map Time", tm_2.Seconds());
 
         PrintTime("GenID Time", tm.Seconds());
         PrintTime("Num Passes", num_passes);
