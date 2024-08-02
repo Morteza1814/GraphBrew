@@ -5,7 +5,7 @@
 # Attempt to find gcc-9, else use default gcc
 CC  = $(shell which gcc-9 || which gcc)
 CXX = $(shell which g++-9 || which g++)
-RABBIT_ENABLE ?= 1
+RABBIT_ENABLE ?= 0
 # =========================================================
 PYTHON=@python3
 PIP=@pip
@@ -151,7 +151,7 @@ install-py-deps: ./$(SCRIPT_DIR)/requirements.txt
 	$(PIP) install -q --upgrade pip
 	$(PIP) install -q -r ./$(SCRIPT_DIR)/requirements.txt
 
-exp-%: install-py-deps all $(BIN_DIR)/converter
+exp-%: all $(BIN_DIR)/converter
 	$(PYTHON) ./$(SCRIPT_DIR)/$*/run_experiment.py
 
 graph-%: install-py-deps $(BIN_DIR)/converter

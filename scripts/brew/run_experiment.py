@@ -3,11 +3,9 @@ import re
 import subprocess
 import csv
 
-max_threads = os.cpu_count()
-
 # Define the base directory containing the graph datasets
-BASE_DIR   = "/bigtemp/rgq5aw/graphDatasets"
-BASE_NVME_DIR   = "/bigtemp/rgq5aw/graphDatasets_5"
+BASE_DIR   = "/bigtemp/rgq5aw/graphDatasets/GBREW"
+BASE_NVME_DIR   = "/bigtemp/rgq5aw/graphDatasets/GBREW_MTX_O"
 RESULT_DIR = "bench/results"
 PARALLEL = os.cpu_count()  # Use all available CPU cores
 LOG_DIR_RUN   = os.path.join(RESULT_DIR, "logs_run")
@@ -73,17 +71,17 @@ reorder_option_mapping = {
 }
 
 single_reorder_option_mapping = {
-    # "Random": "-o0", # this is your baseline
+    "Random": "-o0", # this is your baseline
     # "Sort": "-o2",
     # "HubSort": "-o3",
     # "HubCluster": "-o4",
-    # "DBG": "-o5",
+    "DBG": "-o5",
     # "HubSortDBG": "-o6",
     # "HubClusterDBG": "-o7",
     "RabbitOrder": "-o8",
-    # "Gorder": "-o9",
-    # "Corder": "-o10",
-    # "RCM": "-o11",
+    "Gorder": "-o9",
+    "Corder": "-o10",
+    "RCM": "-o11",
     "GraphBrew_12_025": "-o12:0.25",
     "GraphBrew_12_050": "-o12:0.5",
     "GraphBrew_12_075": "-o12:0.75",
@@ -158,11 +156,9 @@ def run_reorders():
         if not os.path.isfile(random_graph_file):
             print(f"Running converter with reorder {reorder_name} option: {reorder_option}")
             print(f"Output file: {random_graph_file}")
-<<<<<<< HEAD
-            make_command = f"make run-converter GRAPH_BENCH='-f {graph_file} -b {random_graph_file}' RUN_PARAMS='{reorder_option}' FLUSH_CACHE=0 PARALLEL={max_threads}"
-=======
+            
             make_command = f"make run-converter GRAPH_BENCH='-f {graph_file} -b {random_graph_file}' RUN_PARAMS='{reorder_option}' FLUSH_CACHE=0 PARALLEL={PARALLEL}"
->>>>>>> 5a6b641f0cf668977c52d5e825e1d8e55d8243ab
+
             log_file = os.path.join(LOG_DIR_ORDER, f"{graph}_initial.log")
             with open(log_file, 'w') as log:
                 print(f"Executing command: {make_command}")
@@ -429,11 +425,9 @@ def run_convert():
             print(f"Output file: {output_file}")
             
             # Construct and run the make command
-<<<<<<< HEAD
-            make_command = f"make run-converter GRAPH_BENCH='-f {output_file} -b {output_file_conv} -p {output_file_conv}' RUN_PARAMS='-o5' FLUSH_CACHE=0 PARALLEL={max_threads}"
-=======
-            make_command = f"make run-converter GRAPH_BENCH='-f {output_file} -b {output_file_conv} -p {output_file_conv}' RUN_PARAMS='-o5' FLUSH_CACHE=0 PARALLEL={PARALLEL}"
->>>>>>> 5a6b641f0cf668977c52d5e825e1d8e55d8243ab
+
+            make_command = f"make run-converter GRAPH_BENCH='-f {output_file} -p {output_file_conv}' RUN_PARAMS='-o5' FLUSH_CACHE=0 PARALLEL={PARALLEL}"
+
             log_file = os.path.join(LOG_DIR_ORDER, f"{graph}_{reorder_name}.log")
             with open(log_file, 'w') as log:
                 print(f"Executing command: {make_command}")
@@ -453,7 +447,7 @@ def run_convert():
     print("Convert process completed.")
 
 if __name__ == "__main__":
-    # run_convert()
-    run_reorders()
+    run_convert()
+    # run_reorders()
     # run_kernels()
     # run_kernels_affin()

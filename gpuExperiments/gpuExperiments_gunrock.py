@@ -20,9 +20,9 @@ commands = {
     'sssp': '/u/rgq5aw/GIT/gunrock/build/bin/sssp',
     'pr': '/u/rgq5aw/GIT/gunrock/build/bin/pr',
     'bfs': '/u/rgq5aw/GIT/gunrock/build/bin/bfs',
-    'async_bfs': '/u/rgq5aw/GIT/gunrock/build/bin/async_bfs',
     'bc': '/u/rgq5aw/GIT/gunrock/build/bin/bc',
-    'hits': '/u/rgq5aw/GIT/gunrock/build/bin/hits',
+    # 'async_bfs': '/u/rgq5aw/GIT/gunrock/build/bin/async_bfs',
+    # 'hits': '/u/rgq5aw/GIT/gunrock/build/bin/hits',
 }
 
 directories = {
@@ -31,30 +31,47 @@ directories = {
     'CPAT': graph_dir + 'CPAT',
     'SPKC': graph_dir + 'SPKC',
     'CORKT': graph_dir + 'CORKT',
-    # 'WIKLE': graph_dir + 'WIKLE',
-    # 'GPLUS': graph_dir + 'GPLUS',
-    # 'WEB01' : graph_dir + 'WEB01',
-    # 'TWTR' : graph_dir + 'TWTR',
+    'WIKLE': graph_dir + 'WIKLE',
+    'GPLUS': graph_dir + 'GPLUS',
+    'WEB01' : graph_dir + 'WEB01',
+    'TWTR' : graph_dir + 'TWTR',
 }
 
 file_names = {
-    # 'graph_0': 'graph_0.mtx',
-    # 'graph_5': 'graph_5.mtx',
-    # 'graph_8': 'graph_8.mtx',
-    # 'graph_9': 'graph_9.mtx',
-    # 'graph_10': 'graph_10.mtx',
-    # 'graph_11': 'graph_11.mtx',
+    'graph_0': 'graph_0.mtx',
+    'graph_5': 'graph_5.mtx',
+    'graph_8': 'graph_8.mtx',
+    'graph_9': 'graph_9.mtx',
+    'graph_10': 'graph_10.mtx',
+    'graph_11': 'graph_11.mtx',
     # 'graph_12': 'graph_12.mtx',
     # 'graph_13': 'graph_13.mtx'
-    'graph_13:15:1': 'graph_13:15:1.mtx',
-    'graph_13:15:5': 'graph_13:15:5.mtx',
-    'graph_13:15:6': 'graph_13:15:6.mtx',
-    'graph_13:15:7': 'graph_13:15:7.mtx',
-    'graph_13:15:8': 'graph_13:15:8.mtx',
-    'graph_13:15:9': 'graph_13:15:9.mtx',
-    'graph_13:15:10': 'graph_13:15:10.mtx',
-    'graph_13:15:11': 'graph_13:15:11.mtx',
-    'graph_13:15:12': 'graph_13:15:12.mtx',
+    'graph_12:0.25': 'graph_12:0.25.mtx',
+    'graph_12:0.5': 'graph_12:0.5.mtx',
+    'graph_12:0.75': 'graph_12:0.75.mtx',
+    'graph_12:1.0': 'graph_12:1.0.mtx',
+    'graph_12:1.25': 'graph_12:1.25.mtx',
+    'graph_12:1.75': 'graph_12:1.75.mtx',
+    'graph_12:2.0': 'graph_12:2.0.mtx',
+
+    'graph_13:15:5:0.25' : 'graph_13:15:5:0.25.mtx',
+    'graph_13:15:5:1.0' : 'graph_13:15:5:1.0.mtx',
+    'graph_13:15:5:1.75' : 'graph_13:15:5:1.75.mtx',
+    'graph_13:15:8:0.25' : 'graph_13:15:8:0.25.mtx',
+    ' graph_13:15:8:1.0' : 'graph_13:15:8:1.0.mtx',
+    'graph_13:15:8:1.75' : 'graph_13:15:8:1.75.mtx',
+    'graph_13:15:9:0.25' : 'graph_13:15:9:0.25.mtx',
+    'graph_13:15:9:1.0' : 'graph_13:15:9:1.0.mtx',
+    'graph_13:15:9:1.75' : 'graph_13:15:9:1.75.mtx',
+    'graph_13:15:10:0.25' : 'graph_13:15:10:0.25.mtx',
+    'graph_13:15:10:1.0' : 'graph_13:15:10:1.0.mtx',
+    'graph_13:15:10:1.75' : 'graph_13:15:10:1.75.mtx',
+    'graph_13:15:11:0.25' : 'graph_13:15:11:0.25.mtx',
+    'graph_13:15:11:1.0' : 'graph_13:15:11:1.0.mtx',
+    'graph_13:15:11:1.75' : 'graph_13:15:11:1.75.mtx',
+    'graph_13:15:12:0.25' : 'graph_13:15:12:0.25.mtx',
+    'graph_13:15:12:1.00' : 'graph_13:15:12:1.00.mtx',
+    'graph_13:15:12:1.75' : 'graph_13:15:12:1.75.mtx'
 }
 
 # Function to run a command and return its output
@@ -64,7 +81,7 @@ def run_command(command):
 
 # Function to parse the elapsed time from the command output
 def parse_time(output):
-    match = re.search(r'Average GPU Elapsed Time\s*:\s*(\d+\.\d+)\s*\(ms\)', output)
+    match = re.search(r'\s*GPU Elapsed Time\s*:\s*(\d+\.\d+)\s*\(ms\)', output)
     if match:
         return float(match.group(1))
     return None
